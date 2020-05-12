@@ -1,7 +1,7 @@
 ﻿# Личный проект «Седона»
 
 * Студент: [Roman Saburski](https://up.htmlacademy.ru/htmlcss/28/user/1378717).
-* Наставник: Натали Белоева(https://htmlacademy.ru/profile/id1123699).
+* Наставник: [Натали Белоева](https://htmlacademy.ru/profile/id1123699).
 
 ---
 
