@@ -22,7 +22,7 @@
     </header>
     <main>
         <section>
-            <h1 hidden>Sedona</h1>
+            <h1 class="visually-hidden">Sedona</h1>
             <span>
                 <img src="img/welcome.svg" width="457" height="351" alt="Заголовок">
             </span>
@@ -83,12 +83,25 @@
                 Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшее предложения гостиниц в седоне
             </p>
             <button type="button">поиск гостиницы в седоне</button>
-
+            <div>
+                <form action="https://echo.htmlacademy.ru/" method="post">
+                    <p>
+                        <label for="arrival_date">Дата заезда:</label>
+                        <input type="text" name="date" id="arrival_date" placeholder="24 апреля 2017">
+                        <a href="#"><img src="img/calendar.svg" width="21" height="23" alt="иконка календаря"></a>
+                        </input>
+                    </p>
+                    <!--Как правильно сделать иконку календаря?-->
+                    <p>
+                        <label for="departure_date">Дата выезда:</label>
+                        <input type="text" name="date" id="departure_date" placeholder="4 июля 2017">
+                        <a href="#"><img src="img/calendar.svg" width="21" height="23" alt="иконка календаря"></a>
+                        </input>
+                    </p>
+                    <button type="submit">Найти</button>
+                </form>
+            </div>
             <img src="img/map.png" alt="Карта местоположение">
-
-            <form>
-                <!-- Здесь будет форма записи даты поездки-->
-            </form>
         </section>
     </main>
     <footer>
