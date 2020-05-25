@@ -23,9 +23,32 @@
     <main>
         <section>
             <h2 hidden>Форма поиска</h2>
-            <form>
-                <!-- тут будет форма фильтра поиска-->
-                <input type="range" min="0" max="4000" step="1" value="2000">
+            <form action="https://echo.htmlacademy.ru" method="get">
+                <fieldset>
+                    <legend>Инфраструктура:</legend>
+                    <ul>
+                        <li><input type="checkbox" name="pool" checked>Бассейн</li>
+                        <li><input type="checkbox" name="parking">Парковка</li>
+                        <li><input type="checkbox" name="wifi">WI-fi</li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>Тип жилья:</legend>
+                    <ul>
+                        <li><input type="checkbox" checked name="hotel">гостинеца</li>
+                        <li><input type="checkbox" checked name="motel">мотель</li>
+                        <li><input type="checkbox" checked name="apartments">апартаменты</li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>стоимость в сутки(р):</legend>
+                    <p>0</p>
+                    <p>3000</p>
+                    <input type="range" min="0" max="4000" step="1" value="2000">
+                </fieldset>
+                <!--Я не уверен что тут используется input, так как там два ползунка. Я вижу создание на блоках и потом прописывать js
+                     к блокам ползунков-->
+                <button type="submit">Показать</button>
             </form>
         </section>
         <section>
@@ -41,7 +64,7 @@
             <ul>
                 <li>
                     <img src="img/hotel.jpg" width="135" height="90" alt="Изображение дома">
-                    <h3><a href="">Amara Resort & Spa</a></h3>
+                    <h3><a href=" ">Amara Resort & Spa</a></h3>
                     <p>Гостиница</p>
                     <p>От 4000 Р.</p>
                     <a href="#">Подробнее</a>
@@ -52,7 +75,7 @@
                 </li>
                 <li>
                     <img src="img/motel.jpg" width="135" height="90" alt="Изображение дома">
-                    <h3><a href="">Desert Quail Inn</a></h3>
+                    <h3><a href=" ">Desert Quail Inn</a></h3>
                     <p>Мотель</p>
                     <p>От 3000 Р.</p>
                     <a href="#">Подробнее</a>
@@ -63,7 +86,7 @@
                 </li>
                 <li>
                     <img src="img/apartments.jpg" width="135" height="90" alt="Изображение дома">
-                    <h3><a href="">Villas at Poco Diablo</a></h3>
+                    <h3><a href=" ">Villas at Poco Diablo</a></h3>
                     <p>Апартаменты</p>
                     <p>От 2000 Р.</p>
                     <a href="#">Подробнее</a>
@@ -76,7 +99,7 @@
         </section>
     </main>
     <footer>
-        <p>#visitSEDONA<br> ТЕЛ: <a href="tel:+7496660166">+7(495) 666-01-66</a></p>
+        <p>#visitSEDONA<br> ТЕЛ: <a href="tel:+7496660166 ">+7(495) 666-01-66</a></p>
         <ul>
             <li>
                 <a href="#" aria-label="Ссылка Twitter"></a>
@@ -85,7 +108,7 @@
                 <a href="#" aria-label="Ссылка Facebook"></a>
             </li>
             <li>
-                <a href="#" aria-label="Ссылка YouTube"></a>
+                <a href="# " aria-label="Ссылка YouTube"></a>
             </li>
         </ul>
 
