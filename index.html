@@ -22,7 +22,7 @@
     </header>
     <main>
         <section>
-            <h1 hidden>Sedona</h1>
+            <h1 class="visually-hidden">Sedona</h1>
             <span>
                 <img src="img/welcome.svg" width="457" height="351" alt="Заголовок">
             </span>
@@ -72,7 +72,7 @@
                 <li>
                     <h3>мало туристов</h3>
                     <span> — №5 — </span>
-                    <p>большинство елет в гранд каньон<br> и толпится там</p>
+                    <p>большинство едет в гранд каньон<br> и толпится там</p>
                 </li>
             </ul>
         </section>
@@ -83,35 +83,45 @@
                 Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшее предложения гостиниц в седоне
             </p>
             <button type="button">поиск гостиницы в седоне</button>
-
-            <img src="img/map.png" alt="Карта местоположение">
-
-            <form>
-                <!-- Здесь будет форма записи даты поездки-->
-            </form>
+            <div>
+                <form action="https://echo.htmlacademy.ru/" method="post">
+                    <p>
+                        <label for="arrival_date">Дата заезда:</label>
+                        <input type="text" name="date-arrival" id="arrival_date" placeholder="24 апреля 2017">
+                        <button type="button" aria-label="Кнопка календаря"></button>
+                    </p>
+                    <p>
+                        <label for="departure_date">Дата выезда:</label>
+                        <input type="text" name="date-departure" id="departure_date" placeholder="4 июля 2017">
+                        <button type="button" aria-label="Кнопка календаря"></button>
+                    </p>
+                    <button type="submit">Найти</button>
+                </form>
+            </div>
+            <img src="img/map.png" width="1200" height="594" alt="Карта местоположение">
         </section>
     </main>
     <footer>
         <p>#visitSEDONA<br> ТЕЛ: <a href="tel:+74956660166">+7(495) 666-01-66</a></p>
         <ul>
             <li>
-                <a href="#"><img src="img/twitter_icon.svg" width="46" height="48" alt="Иконка Twitter"></a>
+                <a href="#" aria-label="Ссылка Twitter"></a>
             </li>
             <li>
-                <a href="#"><img src="img/facebook_icon.svg" width="46" height="48" alt="Иконка Facebook"></a>
+                <a href="#" aria-label="Ссылка Facebook"></a>
             </li>
             <li>
-                <a href="#"><img src="img/youtube_icon.svg" width="46" height="48" alt="Иконка YouTube"></a>
+                <a href="#" aria-label="Ссылка YouTube"></a>
             </li>
         </ul>
-        <div>
-            <p>Website by
-                <a href="https://htmlacademy.ru/intensive/htmlcss">
-                    <img src="img/logo_htmlacademy.svg" width="115" height="41" alt="Иконка HTMLAcademy">
-                </a>
-            </p>
 
-        </div>
+        <p>Website by
+            <a href="https://htmlacademy.ru/intensive/htmlcss">
+                <img src="img/logo_htmlacademy.svg" width="115" height="41" alt="Иконка HTMLAcademy">
+            </a>
+        </p>
+
+
     </footer>
 
 </body>
