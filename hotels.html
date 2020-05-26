@@ -27,25 +27,27 @@
                 <fieldset>
                     <legend>Инфраструктура:</legend>
                     <ul>
-                        <li><input type="checkbox" name="pool" checked>Бассейн</li>
-                        <li><input type="checkbox" name="parking">Парковка</li>
-                        <li><input type="checkbox" name="wifi">WI-fi</li>
+                        <li><label><input type="checkbox" name="pool" checked>Бассейн</label></li>
+                        <li><label><input type="checkbox" name="parking">Парковка</label></li>
+                        <li><label><input type="checkbox" name="wifi">WI-fi</label></li>
                     </ul>
                 </fieldset>
                 <fieldset>
                     <legend>Тип жилья:</legend>
                     <ul>
-                        <li><input type="checkbox" checked name="hotel">гостинеца</li>
-                        <li><input type="checkbox" checked name="motel">мотель</li>
-                        <li><input type="checkbox" checked name="apartments">апартаменты</li>
+                        <li><label><input type="checkbox" checked name="hotel">гостинеца</label></li>
+                        <li><label><input type="checkbox" checked name="motel">мотель</label></li>
+                        <li><label><input type="checkbox" checked name="apartments">апартаменты</label></li>
                     </ul>
                 </fieldset>
                 <div>
                     <p>стоимость в сутки(р):</p>
-                    <p><span>0</span><span>3000</span></p>
+                    <p>
+                        <label>от<input type="text" name="after" placeholder="0"></label>
+                        <label>до<input type="text" name="before" placeholder="3000"></label>
+                    </p>
                     <div><span></span><span></span></div>
                 </div>
-                <!--для ползунков я создал элементы спан внутри дива который будет выглядить как полоса между ползунков-->
                 <button type="submit">Показать</button>
             </form>
         </section>
