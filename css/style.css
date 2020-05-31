@@ -1,0 +1,440 @@
+:root {
+    --basic-light-grey: #EEEEEE;
+    --basic-white: #ffffff;
+    --basic-black: #000000;
+    --basic-light-black: #333333;
+    --basic-blue: #81B3D2;
+    --basic-dark-grey: #888888;
+    --basic-grey: #ABABAB;
+    --hover-blue: #669EC0;
+    --active-blue: #5496BD;
+    --special-brown: #766357;
+    --hover-brown: #604E43;
+    --active-brown: #503E33;
+    --special-grey: #6A6A6A;
+    --special-light-grey: #f2f2f2;
+    --hover-grey-: #EBEBEB;
+}
+
+
+/* Global */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.visually-hidden {
+    display: none;
+}
+
+html {
+    background-color: var(--basic-light-grey);
+}
+
+body {
+    margin: 0 auto;
+    max-width: 1200px;
+    background-color: var(--basic-white);
+    font-family: 'PT Sans', sans-serif;
+    color: var(--basic-black);
+    text-transform: uppercase;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: var(--basic-black);
+}
+
+button {
+    border: none;
+}
+
+.button {
+    font: inherit;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    border: none;
+}
+
+
+/* Header */
+
+.main-header {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.list-navigation {
+    list-style: none;
+}
+
+.list-navigation a:hover {
+    color: var(--basic-blue);
+}
+
+.list-navigation a:active {
+    color: var(--special-light-grey);
+}
+
+.list-navigation a:visited {
+    color: var(--special-brown);
+}
+
+
+/*Section Heading*/
+
+.title-picture {
+    background-image: url("../img/background_photo.jpg");
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 1200px;
+    height: 509px;
+}
+
+.title-picture::after {
+    content: "";
+    display: block;
+    background-image: url("../img/background_mask.png");
+    background-repeat: no-repeat;
+    width: 1200px;
+    height: 57px;
+}
+
+.heading-site h3 {
+    font-size: 21px;
+    line-height: 26px;
+    text-align: center;
+}
+
+.heading-site p {
+    font-size: 14px;
+    line-height: 26px;
+    color: var(--basic-light-black);
+    text-align: center;
+}
+
+
+/* Section voucher*/
+
+.subtitle {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.text {
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--basic-light-black);
+    text-align: center;
+}
+
+.button-popup {
+    border: none;
+    color: var(--basic-white);
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 26px;
+    text-align: center;
+    background-color: var(--special-brown);
+}
+
+.popup-element {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.popup-element input {
+    border: none;
+    background-color: var(--special-light-grey);
+    font: inherit;
+    padding: 5px 10px;
+}
+
+
+/*Button popup*/
+
+.popup-element button[type="submit"] {
+    background-color: var(--basic-blue);
+    background-repeat: no-repeat;
+    color: var(--basic-white);
+    text-align: center;
+}
+
+.popup-element button[type="submit"]:hover {
+    background-color: var(--hover-blue);
+}
+
+.popup-element button[type="submit"]:focus {
+    background-color: var(--active-blue);
+    color: var(--basic-blue);
+}
+
+
+/*Button calendar*/
+
+.date-departure button,
+.date-arrival button {
+    background-color: transparent;
+    background-image: url(../img/calendar.svg);
+    background-repeat: no-repeat;
+    width: 21px;
+    height: 23px;
+}
+
+.date-departure button:hover,
+.date-arrival button:hover {
+    background-color: transparent;
+    background-image: url(../img/calendar_hover.svg);
+    background-repeat: no-repeat;
+    width: 21px;
+    height: 23px;
+}
+
+.date-departure button:focus,
+.date-arrival button:focus {
+    background-color: transparent;
+    background-image: url(../img/calendar_focus.svg);
+    background-repeat: no-repeat;
+    width: 21px;
+    height: 23px;
+}
+
+
+/*Buton plus and minus*/
+
+.plus {
+    background-color: transparent;
+    background-image: url(../img/plus.svg);
+    background-repeat: no-repeat;
+    width: 11px;
+    height: 11px;
+}
+
+.plus:hover {
+    background-color: transparent;
+    background-image: url(../img/plus_hover.svg);
+    background-repeat: no-repeat;
+    width: 11px;
+    height: 11px;
+}
+
+.plus:focus {
+    background-color: transparent;
+    background-image: url(../img/plus_focus.svg);
+    background-repeat: no-repeat;
+    width: 11px;
+    height: 11px;
+}
+
+.minus {
+    background-color: transparent;
+    background-image: url(../img/minus.svg);
+    background-repeat: no-repeat;
+    width: 11px;
+    height: 11px;
+}
+
+.minus:hover {
+    background-color: transparent;
+    background-image: url(../img/minus_hover.svg);
+    background-repeat: no-repeat;
+    width: 11px;
+    height: 11px;
+}
+
+.minus:focus {
+    background-color: transparent;
+    background-image: url(../img/minus_focus.svg);
+    background-repeat: no-repeat;
+    width: 11px;
+    height: 11px;
+}
+
+
+/*Hotels site*/
+
+.list-search {
+    list-style: none;
+}
+
+.list-search li:first-child {
+    border-top: 2px solid var(--special-light-grey);
+}
+
+.list-search li {
+    border-bottom: 2px solid var(--special-light-grey);
+}
+
+.tittle-search a {
+    font-size: 21px;
+    line-height: 26px;
+}
+
+.title-search a:hover {
+    color: var(--basic-blue);
+}
+
+.title-search a:focus {
+    color: var(--basic-grey);
+}
+
+.item-search p {
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.item-search span {
+    display: inline-block;
+    background: url(../img/star.svg) repeat-x
+    /*Как тут сделать грамтоное повторение звезд с нужным интрвалом между друг другом?*/
+}
+
+.rating-paragraph {
+    color: var(--basic-light-black);
+    background-color: var(--special-light-grey);
+}
+
+.details {
+    background-color: var(--basic-blue);
+    color: var(--basic-white);
+    padding: 3px 16px 3px 17px;
+}
+
+.details:hover {
+    background-color: var(--hover-blue);
+}
+
+.details:focus {
+    background-color: var(--active-blue);
+    color: var(--basic-blue);
+}
+
+.reservation {
+    background-color: var(--special-brown);
+    color: var(--basic-white);
+    padding: 3px 17px 3px 16px;
+}
+
+.reservation:hover {
+    background-color: var(--hover-brown);
+}
+
+.reservation:focus {
+    background-color: var(--active-brown);
+    color: var(--special-brown)
+}
+
+.rating-paragraph {
+    display: inline-block;
+    color: var(--basic-light-black);
+    background-color: var(--special-light-grey);
+    padding: 3px 12px 3px 15px;
+}
+
+
+/*Footer*/
+
+.phone-conteiner {
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 26px;
+}
+
+.list-social {
+    list-style: none;
+}
+
+.link-html {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 26px;
+    vertical-align: middle;
+    /*не могу центрировать текст по середине, из за чего это может быть?*/
+}
+
+
+/*Social link*/
+
+.item-twitter a {
+    display: inline-block;
+    background-color: var(--basic-blue);
+    width: 46px;
+    height: 48px;
+    background-image: url(../img/twitter.svg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.item-facebook a {
+    display: inline-block;
+    background-color: var(--basic-blue);
+    width: 46px;
+    height: 48px;
+    background-image: url(../img/facebook.svg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.item-youtube a {
+    display: inline-block;
+    background-color: var(--basic-blue);
+    width: 46px;
+    height: 48px;
+    background-image: url(../img/youtube.svg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.item-twitter a:hover,
+.item-facebook a:hover,
+.item-youtube a:hover {
+    background-color: var(--hover-blue);
+}
+
+.item-twitter a:focus {
+    background-color: var(--active-blue);
+    background-image: url(../img/twitter_focus.svg);
+}
+
+.item-facebook a:focus {
+    background-color: var(--active-blue);
+    background-image: url(../img/facebook_focus.svg);
+}
+
+.item-youtube a:focus {
+    background-color: var(--active-blue);
+    background-image: url(../img/youtube_focus.svg);
+}
+
+
+/*Link for site HTMLacademy*/
+
+.link-html a {
+    display: inline-block;
+    background-color: transparent;
+    background-image: url(../img/logo_htmlacademy.svg);
+    width: 115px;
+    height: 41px;
+}
+
+.link-html a:hover {
+    background-image: url(../img/logo_htmlacademy_hover.svg);
+}
+
+.link-html a:focus {
+    background-image: url(../img/logo_htmlacademy_focus.svg);
+}
