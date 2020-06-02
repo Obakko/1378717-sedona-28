@@ -29,16 +29,20 @@
 
 .visually-hidden {
     position: absolute;
-    clip: rect(0 0 0 0);
     width: 1px;
     height: 1px;
     margin: -1px;
-    visibility: hidden;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 body {
     background-color: var(--basic-light-grey);
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Sans', sans-serif, 'Arial', sans-serif;
     color: var(--basic-black);
     text-transform: uppercase;
     font-size: 14px;
@@ -92,7 +96,7 @@ a {
     color: var(--special-light-grey);
 }
 
-.hotels a {
+.list-navigation a.is-active {
     color: var(--special-brown);
 }
 
@@ -126,6 +130,74 @@ a {
     line-height: 26px;
     color: var(--basic-light-black);
     text-align: center;
+}
+
+
+/*Section information*/
+
+.list-location {
+    list-style: none;
+}
+
+.first,
+.second {
+    background-color: var(--basic-blue);
+    color: var(--basic-white);
+}
+
+.item-location h3 {
+    font-size: 21px;
+    line-height: 21px;
+}
+
+.list-advantages {
+    list-style: none;
+    display: flex;
+}
+
+.list-advantages li {
+    background-color: var(--basic-white);
+    color: var(--basic-light-black);
+    font-size: 14px;
+    line-height: 21px;
+    height: 330px;
+    flex-grow: 1;
+}
+
+.list-advantages h3 {
+    color: var(--basic-black);
+    font-size: 21px;
+    line-height: 21px;
+}
+
+.list-advantages li:nth-child(1) {
+    background-image: url(../img/icon_home.svg);
+    background-repeat: no-repeat;
+    background-size: 75px 72px;
+}
+
+.list-advantages li:nth-child(2) {
+    background-image: url(../img/icon_food.svg);
+    background-repeat: no-repeat;
+    background-size: 75px 70px;
+}
+
+.list-advantages li:nth-child(3) {
+    background-image: url(../img/icon_souvenir.svg);
+    background-repeat: no-repeat;
+    background-size: 64px 77px;
+}
+
+.third,
+.fourth,
+.fifth {
+    background-color: var(--basic-light-grey);
+}
+
+.third p,
+.fourth p,
+.fifth p {
+    color: var(--basic-light-black);
 }
 
 
@@ -295,16 +367,16 @@ a {
     border-bottom: 2px solid var(--special-light-grey);
 }
 
-.tittle-search a {
+.name-hous a {
     font-size: 21px;
     line-height: 26px;
 }
 
-.title-search a:hover {
+.name-hous a:hover {
     color: var(--basic-blue);
 }
 
-.title-search a:focus {
+.name-hous a:active {
     color: var(--basic-grey);
 }
 
@@ -312,10 +384,12 @@ a {
     color: var(--basic-light-black);
 }
 
-.item-search span {
+.star span {
     display: inline-block;
-    background: url(../img/star.svg) repeat-x
-    /*Как тут сделать грамтоное повторение звезд с нужным интрвалом между друг другом?*/
+    vertical-align: middle;
+    background: url(../img/star.svg) repeat-x;
+    width: 19px;
+    height: 17px;
 }
 
 .rating-paragraph {
@@ -374,65 +448,70 @@ a {
 }
 
 .link-html {
-    display: inline-block;
     font-size: 14px;
     line-height: 26px;
-    vertical-align: middle;
-    /*не могу центрировать текст по середине, из за чего это может быть?*/
 }
 
 
 /*Social link*/
 
-.item-twitter a {
+.item-social a {
     display: inline-block;
     background-color: var(--basic-blue);
     width: 46px;
     height: 48px;
+    position: relative;
+}
+
+.twitter a::after {
     background-image: url(../img/twitter.svg);
-    background-position: 50% 50%;
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 16px;
+    display: inline-block;
+    vertical-align: middle;
     background-repeat: no-repeat;
+    width: 17px;
+    height: 17px;
 }
 
-.item-facebook a {
-    display: inline-block;
-    background-color: var(--basic-blue);
-    width: 46px;
-    height: 48px;
+.facebook a::after {
     background-image: url(../img/facebook.svg);
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-}
-
-.item-youtube a {
+    content: "";
+    position: absolute;
+    left: 17px;
+    top: 13px;
     display: inline-block;
-    background-color: var(--basic-blue);
-    width: 46px;
-    height: 48px;
-    background-image: url(../img/youtube.svg);
-    background-position: 50% 50%;
+    vertical-align: middle;
     background-repeat: no-repeat;
+    width: 12px;
+    height: 22px;
 }
 
-.item-twitter a:hover,
-.item-facebook a:hover,
-.item-youtube a:hover {
+.youtube a::after {
+    content: "";
+    position: absolute;
+    left: 13px;
+    top: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 16px;
+    background-image: url(../img/youtube.svg);
+}
+
+.item-social a:hover {
     background-color: var(--hover-blue);
 }
 
-.item-twitter a:focus {
+.item-social a:active {
     background-color: var(--active-blue);
-    background-image: url(../img/twitter_focus.svg);
 }
 
-.item-facebook a:focus {
-    background-color: var(--active-blue);
-    background-image: url(../img/facebook_focus.svg);
-}
-
-.item-youtube a:focus {
-    background-color: var(--active-blue);
-    background-image: url(../img/youtube_focus.svg);
+.item-social a:active::after {
+    opacity: 0.1;
 }
 
 
@@ -440,6 +519,7 @@ a {
 
 .link-html a {
     display: inline-block;
+    vertical-align: middle;
     background-color: transparent;
     background-image: url(../img/logo_htmlacademy.svg);
     width: 115px;
@@ -450,6 +530,6 @@ a {
     background-image: url(../img/logo_htmlacademy_hover.svg);
 }
 
-.link-html a:focus {
+.link-html a:active {
     background-image: url(../img/logo_htmlacademy_focus.svg);
 }
