@@ -28,20 +28,27 @@
 }
 
 .visually-hidden {
-    display: none;
-}
-
-html {
-    background-color: var(--basic-light-grey);
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    visibility: hidden;
 }
 
 body {
-    margin: 0 auto;
-    max-width: 1200px;
-    background-color: var(--basic-white);
+    background-color: var(--basic-light-grey);
     font-family: 'PT Sans', sans-serif;
     color: var(--basic-black);
     text-transform: uppercase;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1200px;
+    background-color: var(--basic-white);
 }
 
 img {
@@ -54,14 +61,12 @@ a {
     color: var(--basic-black);
 }
 
-button {
-    border: none;
-}
-
 .button {
     font: inherit;
     text-align: center;
     vertical-align: middle;
+    font-size: 14px;
+    line-height: 21px;
     text-transform: uppercase;
     border: none;
 }
@@ -87,7 +92,7 @@ button {
     color: var(--special-light-grey);
 }
 
-.list-navigation a:visited {
+.hotels a {
     color: var(--special-brown);
 }
 
@@ -97,7 +102,6 @@ button {
 .title-picture {
     background-image: url("../img/background_photo.jpg");
     background-repeat: no-repeat;
-    display: inline-block;
     width: 1200px;
     height: 509px;
 }
@@ -151,6 +155,15 @@ button {
     background-color: var(--special-brown);
 }
 
+.button-popup:hover {
+    background-color: var(--hover-brown);
+}
+
+.button-popup:focus {
+    background-color: var(--active-brown);
+    color: var(--special-brown);
+}
+
 .popup-element {
     font-weight: bold;
     font-size: 14px;
@@ -170,6 +183,9 @@ button {
 .popup-element button[type="submit"] {
     background-color: var(--basic-blue);
     background-repeat: no-repeat;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 26px;
     color: var(--basic-white);
     text-align: center;
 }
@@ -293,8 +309,7 @@ button {
 }
 
 .item-search p {
-    font-size: 14px;
-    line-height: 21px;
+    color: var(--basic-light-black);
 }
 
 .item-search span {
