@@ -1,0 +1,535 @@
+:root {
+    --basic-light-grey: #EEEEEE;
+    --basic-white: #ffffff;
+    --basic-black: #000000;
+    --basic-light-black: #333333;
+    --basic-blue: #81B3D2;
+    --basic-dark-grey: #888888;
+    --basic-grey: #ABABAB;
+    --hover-blue: #669EC0;
+    --active-blue: #5496BD;
+    --special-brown: #766357;
+    --hover-brown: #604E43;
+    --active-brown: #503E33;
+    --special-grey: #6A6A6A;
+    --special-light-grey: #f2f2f2;
+    --hover-grey-: #EBEBEB;
+}
+
+
+/* Global */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+body {
+    background-color: var(--basic-light-grey);
+    font-family: 'PT Sans', sans-serif, 'Arial', sans-serif;
+    color: var(--basic-black);
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1200px;
+    background-color: var(--basic-white);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: var(--basic-black);
+}
+
+.button {
+    font: inherit;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 21px;
+    text-transform: uppercase;
+    border: none;
+}
+
+
+/* Header */
+
+.main-header {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.list-navigation {
+    list-style: none;
+}
+
+.list-navigation a:hover {
+    color: var(--basic-blue);
+}
+
+.list-navigation a:active {
+    color: var(--special-light-grey);
+}
+
+.list-navigation a.is-active {
+    color: var(--special-brown);
+}
+
+
+/*Section Heading*/
+
+.title-picture {
+    background-image: url("../img/background_photo.jpg");
+    background-repeat: no-repeat;
+    width: 1200px;
+    height: 509px;
+}
+
+.title-picture::after {
+    content: "";
+    display: block;
+    background-image: url("../img/background_mask.png");
+    background-repeat: no-repeat;
+    width: 1200px;
+    height: 57px;
+}
+
+.heading-site h3 {
+    font-size: 21px;
+    line-height: 26px;
+    text-align: center;
+}
+
+.heading-site p {
+    font-size: 14px;
+    line-height: 26px;
+    color: var(--basic-light-black);
+    text-align: center;
+}
+
+
+/*Section information*/
+
+.list-location {
+    list-style: none;
+}
+
+.first,
+.second {
+    background-color: var(--basic-blue);
+    color: var(--basic-white);
+}
+
+.item-location h3 {
+    font-size: 21px;
+    line-height: 21px;
+}
+
+.list-advantages {
+    list-style: none;
+    display: flex;
+}
+
+.list-advantages li {
+    background-color: var(--basic-white);
+    color: var(--basic-light-black);
+    font-size: 14px;
+    line-height: 21px;
+    height: 330px;
+    flex-grow: 1;
+}
+
+.list-advantages h3 {
+    color: var(--basic-black);
+    font-size: 21px;
+    line-height: 21px;
+}
+
+.list-advantages li:nth-child(1) {
+    background-image: url(../img/icon_home.svg);
+    background-repeat: no-repeat;
+    background-size: 75px 72px;
+}
+
+.list-advantages li:nth-child(2) {
+    background-image: url(../img/icon_food.svg);
+    background-repeat: no-repeat;
+    background-size: 75px 70px;
+}
+
+.list-advantages li:nth-child(3) {
+    background-image: url(../img/icon_souvenir.svg);
+    background-repeat: no-repeat;
+    background-size: 64px 77px;
+}
+
+.third,
+.fourth,
+.fifth {
+    background-color: var(--basic-light-grey);
+}
+
+.third p,
+.fourth p,
+.fifth p {
+    color: var(--basic-light-black);
+}
+
+
+/* Section voucher*/
+
+.subtitle {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.text {
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--basic-light-black);
+    text-align: center;
+}
+
+.button-popup {
+    border: none;
+    color: var(--basic-white);
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 26px;
+    text-align: center;
+    background-color: var(--special-brown);
+}
+
+.button-popup:hover {
+    background-color: var(--hover-brown);
+}
+
+.button-popup:focus {
+    background-color: var(--active-brown);
+    color: var(--special-brown);
+}
+
+.popup-element {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.popup-element input {
+    border: none;
+    background-color: var(--special-light-grey);
+    font: inherit;
+    padding: 5px 10px;
+}
+
+
+/*Button popup*/
+
+.popup-element button[type="submit"] {
+    background-color: var(--basic-blue);
+    background-repeat: no-repeat;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 26px;
+    color: var(--basic-white);
+    text-align: center;
+}
+
+.popup-element button[type="submit"]:hover {
+    background-color: var(--hover-blue);
+}
+
+.popup-element button[type="submit"]:focus {
+    background-color: var(--active-blue);
+    color: var(--basic-blue);
+}
+
+
+/*Button calendar*/
+
+.date-departure button,
+.date-arrival button {
+    background-color: transparent;
+    background-image: url(../img/calendar.svg);
+    background-repeat: no-repeat;
+    width: 21px;
+    height: 23px;
+}
+
+.date-departure button:hover,
+.date-arrival button:hover {
+    background-color: transparent;
+    background-image: url(../img/calendar_hover.svg);
+    background-repeat: no-repeat;
+    width: 21px;
+    height: 23px;
+}
+
+.date-departure button:focus,
+.date-arrival button:focus {
+    background-color: transparent;
+    background-image: url(../img/calendar_focus.svg);
+    background-repeat: no-repeat;
+    width: 21px;
+    height: 23px;
+}
+
+
+/*Buton plus and minus*/
+
+.plus {
+    background-color: transparent;
+    background-image: url(../img/plus.svg);
+    background-repeat: no-repeat;
+    width: 11px;
+    height: 11px;
+}
+
+.plus:hover {
+    background-color: transparent;
+    background-image: url(../img/plus_hover.svg);
+    background-repeat: no-repeat;
+    width: 11px;
+    height: 11px;
+}
+
+.plus:focus {
+    background-color: transparent;
+    background-image: url(../img/plus_focus.svg);
+    background-repeat: no-repeat;
+    width: 11px;
+    height: 11px;
+}
+
+.minus {
+    background-color: transparent;
+    background-image: url(../img/minus.svg);
+    background-repeat: no-repeat;
+    width: 11px;
+    height: 11px;
+}
+
+.minus:hover {
+    background-color: transparent;
+    background-image: url(../img/minus_hover.svg);
+    background-repeat: no-repeat;
+    width: 11px;
+    height: 11px;
+}
+
+.minus:focus {
+    background-color: transparent;
+    background-image: url(../img/minus_focus.svg);
+    background-repeat: no-repeat;
+    width: 11px;
+    height: 11px;
+}
+
+
+/*Hotels site*/
+
+.list-search {
+    list-style: none;
+}
+
+.list-search li:first-child {
+    border-top: 2px solid var(--special-light-grey);
+}
+
+.list-search li {
+    border-bottom: 2px solid var(--special-light-grey);
+}
+
+.name-hous a {
+    font-size: 21px;
+    line-height: 26px;
+}
+
+.name-hous a:hover {
+    color: var(--basic-blue);
+}
+
+.name-hous a:active {
+    color: var(--basic-grey);
+}
+
+.item-search p {
+    color: var(--basic-light-black);
+}
+
+.star span {
+    display: inline-block;
+    vertical-align: middle;
+    background: url(../img/star.svg) repeat-x;
+    width: 19px;
+    height: 17px;
+}
+
+.rating-paragraph {
+    color: var(--basic-light-black);
+    background-color: var(--special-light-grey);
+}
+
+.details {
+    background-color: var(--basic-blue);
+    color: var(--basic-white);
+    padding: 3px 16px 3px 17px;
+}
+
+.details:hover {
+    background-color: var(--hover-blue);
+}
+
+.details:focus {
+    background-color: var(--active-blue);
+    color: var(--basic-blue);
+}
+
+.reservation {
+    background-color: var(--special-brown);
+    color: var(--basic-white);
+    padding: 3px 17px 3px 16px;
+}
+
+.reservation:hover {
+    background-color: var(--hover-brown);
+}
+
+.reservation:focus {
+    background-color: var(--active-brown);
+    color: var(--special-brown)
+}
+
+.rating-paragraph {
+    display: inline-block;
+    color: var(--basic-light-black);
+    background-color: var(--special-light-grey);
+    padding: 3px 12px 3px 15px;
+}
+
+
+/*Footer*/
+
+.phone-conteiner {
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 26px;
+}
+
+.list-social {
+    list-style: none;
+}
+
+.link-html {
+    font-size: 14px;
+    line-height: 26px;
+}
+
+
+/*Social link*/
+
+.item-social a {
+    display: inline-block;
+    background-color: var(--basic-blue);
+    width: 46px;
+    height: 48px;
+    position: relative;
+}
+
+.twitter a::after {
+    background-image: url(../img/twitter.svg);
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    width: 17px;
+    height: 17px;
+}
+
+.facebook a::after {
+    background-image: url(../img/facebook.svg);
+    content: "";
+    position: absolute;
+    left: 17px;
+    top: 13px;
+    display: inline-block;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 22px;
+}
+
+.youtube a::after {
+    content: "";
+    position: absolute;
+    left: 13px;
+    top: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 16px;
+    background-image: url(../img/youtube.svg);
+}
+
+.item-social a:hover {
+    background-color: var(--hover-blue);
+}
+
+.item-social a:active {
+    background-color: var(--active-blue);
+}
+
+.item-social a:active::after {
+    opacity: 0.1;
+}
+
+
+/*Link for site HTMLacademy*/
+
+.link-html a {
+    display: inline-block;
+    vertical-align: middle;
+    background-color: transparent;
+    background-image: url(../img/logo_htmlacademy.svg);
+    width: 115px;
+    height: 41px;
+}
+
+.link-html a:hover {
+    background-image: url(../img/logo_htmlacademy_hover.svg);
+}
+
+.link-html a:active {
+    background-image: url(../img/logo_htmlacademy_focus.svg);
+}
