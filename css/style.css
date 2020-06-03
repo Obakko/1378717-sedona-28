@@ -42,7 +42,7 @@
 
 body {
     background-color: var(--basic-light-grey);
-    font-family: 'PT Sans', sans-serif, 'Arial', sans-serif;
+    font-family: 'PT Sans', 'Arial', sans-serif;
     color: var(--basic-black);
     text-transform: uppercase;
     font-size: 14px;
@@ -412,8 +412,81 @@ a {
     background-repeat: no-repeat;
 }
 
-.infrastructure input:checked+.infrastructure label::before {
+.infrastructure input:checked~.infrastructure label::before {
     background-image: url(../img/checkbox_on.svg);
+}
+
+
+/*Не могу сообразить как изменить checkbox*/
+
+.price-tag {
+    border: 3px solid var(--basic-white);
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--basic-white);
+    margin-top: 11px;
+    width: 317px;
+    height: 36px;
+}
+
+.price-tag input {
+    border: none;
+    background-color: transparent;
+    width: 37px;
+    margin-left: 5px;
+    color: var(--basic-white);
+    font-size: 14px;
+    line-height: 21px;
+}
+
+
+/*тут Поменять стили в самом placeholder нужно, но у меня не вышло. Использовал совместимость с браузерами и не помогло
+
+::-webkit-input-placeholder {
+    color: var(--basic-white);
+    font-size: 14px;
+    line-height: 21px;
+}
+
+::-moz-placeholder {
+    color: var(--basic-white);
+    font-size: 14px;
+    line-height: 21px;
+}
+
+
+
+
+:-moz-placeholder {
+    color: var(--basic-white);
+    font-size: 14px;
+    line-height: 21px;
+}
+
+
+
+
+:-ms-input-placeholder {
+    color: var(--basic-white);
+    font-size: 14px;
+    line-height: 21px;
+}*/
+
+.result-button {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 7px 35px 8px 36px;
+    background-color: transparent;
+    border: 3px solid var(--basic-white);
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--basic-white);
+}
+
+.result-button:hover {
+    color: var(--basic-black);
+    background-color: var(--basic-white);
+    cursor: pointer;
 }
 
 .sorting-list h3 {
@@ -471,62 +544,6 @@ a {
 .arrow-up:active,
 .arrow-down:active {
     background-image: url(../img/icon_dir_active.svg);
-}
-
-
-/*Не могу сообразить как изменить checkbox*/
-
-.price-tag input {
-    border: none;
-    background-color: transparent;
-    width: 37px;
-    margin-left: 5px;
-    color: var(--basic-white);
-    font-size: 14px;
-    line-height: 21px;
-}
-
-
-/*тут Поменять стили в самом placeholder нужно, но у меня не вышло. Использовал совместимость с браузерами и не помогло
-
-::-webkit-input-placeholder {
-    color: var(--basic-white);
-    font-size: 14px;
-    line-height: 21px;
-}
-
-::-moz-placeholder {
-    color: var(--basic-white);
-    font-size: 14px;
-    line-height: 21px;
-}
-
-
-
-
-:-moz-placeholder {
-    color: var(--basic-white);
-    font-size: 14px;
-    line-height: 21px;
-}
-
-
-
-
-:-ms-input-placeholder {
-    color: var(--basic-white);
-    font-size: 14px;
-    line-height: 21px;
-}*/
-
-.price-tag {
-    border: 3px solid var(--basic-white);
-    font-size: 14px;
-    line-height: 21px;
-    color: var(--basic-white);
-    margin-top: 11px;
-    width: 317px;
-    height: 36px;
 }
 
 
@@ -634,6 +651,7 @@ a {
 
 .item-social a {
     display: inline-block;
+    vertical-align: top;
     background-color: var(--basic-blue);
     width: 46px;
     height: 48px;
