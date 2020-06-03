@@ -25,10 +25,10 @@
             </a>
         </header>
         <main class="container">
-            <section>
+            <section class="form-block">
                 <h2 class="visually-hidden">Форма поиска</h2>
-                <form action="https://echo.htmlacademy.ru" method="get">
-                    <fieldset>
+                <form class="filter" action="https://echo.htmlacademy.ru" method="get">
+                    <fieldset class="infrastructure">
                         <legend>Инфраструктура:</legend>
                         <ul>
                             <li><label><input type="checkbox" name="pool" checked>Бассейн</label></li>
@@ -36,21 +36,21 @@
                             <li><label><input type="checkbox" name="wifi">WI-fi</label></li>
                         </ul>
                     </fieldset>
-                    <fieldset>
+                    <fieldset class="type-hous">
                         <legend>Тип жилья:</legend>
                         <ul>
-                            <li><label><input type="checkbox" checked name="hotel">гостинеца</label></li>
+                            <li><label><input type="checkbox" checked name="hotel">гостиница</label></li>
                             <li><label><input type="checkbox" checked name="motel">мотель</label></li>
                             <li><label><input type="checkbox" checked name="apartments">апартаменты</label></li>
                         </ul>
                     </fieldset>
-                    <div>
-                        <p>стоимость в сутки(р):</p>
-                        <p>
+                    <div class="slider-box">
+                        <p class="title-slider">стоимость в сутки(р):</p>
+                        <p class="price-tag">
                             <label>от<input type="text" name="after" placeholder="0"></label>
                             <label>до<input type="text" name="before" placeholder="3000"></label>
                         </p>
-                        <div><span></span><span></span></div>
+                        <div class="slider"><span></span><span></span></div>
                     </div>
                     <button class="button" type="submit">Показать</button>
                 </form>
@@ -59,11 +59,11 @@
                 <div class="sorting-list">
                     <h3>Найдено: 3</h3>
                     <p>Сортировка:</p>
-                    <a href="#">По цене</a>
-                    <a href="#">По типу</a>
-                    <a href="#">По рейтингу</a>
-                    <a href="#" aria-label="Стрелка вверх"></a>
-                    <a href="#" aria-label="Стрелка вниз"></a>
+                    <a class="sorting-item active-item" href="#">По цене</a>
+                    <a class="sorting-item" href="#">По типу</a>
+                    <a class="sorting-item" href="#">По рейтингу</a>
+                    <a class="arrow-up" href="#" aria-label="Стрелка вверх"></a>
+                    <a class="arrow-down" href="#" aria-label="Стрелка вниз"></a>
                 </div>
                 <ul class="list-search">
                     <li class="item-search">

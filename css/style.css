@@ -355,6 +355,183 @@ a {
 
 /*Hotels site*/
 
+
+/*Search form*/
+
+.form-block {
+    background-image: url(../img/background_hottels.jpg);
+    background-repeat: no-repeat;
+    height: 217px;
+    width: 100%;
+}
+
+.filter {
+    display: flex;
+}
+
+.filter ul {
+    list-style: none;
+}
+
+.filter fieldset {
+    border: none;
+}
+
+.filter legend,
+.title-slider {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    color: var(--basic-white);
+}
+
+.infrastructure input,
+.type-hous input {
+    display: none;
+}
+
+.infrastructure label,
+.type-hous label {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--basic-white);
+    width: 170px;
+    height: 40px;
+}
+
+.infrastructure label::before,
+.type-hous label::before {
+    content: "";
+    display: inline-block;
+    vertical-align: bottom;
+    width: 27px;
+    height: 23px;
+    background-image: url(../img/checkbox-off.svg);
+    background-repeat: no-repeat;
+}
+
+.infrastructure input:checked+.infrastructure label::before {
+    background-image: url(../img/checkbox_on.svg);
+}
+
+.sorting-list h3 {
+    font-size: 21px;
+    line-height: 26px;
+}
+
+.sorting-list p,
+.sorting-list a {
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.sorting-list .active-item {
+    color: var(--basic-blue);
+    border-bottom: 1px dotted;
+}
+
+.sorting-item {
+    color: var(--basic-grey);
+}
+
+.sorting-item:hover {
+    color: var(--basic-blue);
+    border-bottom: 1px dotted var(--basic-blue)
+}
+
+.sorting-item:active {
+    color: var(--basic-black);
+    border: none;
+}
+
+.arrow-up {
+    display: inline-block;
+    vertical-align: middle;
+    width: 11px;
+    height: 10px;
+    background-image: url(../img/icon_dir.svg);
+}
+
+.arrow-down {
+    display: inline-block;
+    vertical-align: middle;
+    width: 11px;
+    height: 10px;
+    background-image: url(../img/icon_dir_active.svg);
+    transform: rotate(180deg);
+}
+
+.arrow-up:hover,
+.arrow-down:hover {
+    background-image: url(../img/icon_dir_hover.svg);
+}
+
+.arrow-up:active,
+.arrow-down:active {
+    background-image: url(../img/icon_dir_active.svg);
+}
+
+
+/*Не могу сообразить как изменить checkbox*/
+
+.price-tag input {
+    border: none;
+    background-color: transparent;
+    width: 37px;
+    margin-left: 5px;
+    color: var(--basic-white);
+    font-size: 14px;
+    line-height: 21px;
+}
+
+
+/*тут Поменять стили в самом placeholder нужно, но у меня не вышло. Использовал совместимость с браузерами и не помогло
+
+::-webkit-input-placeholder {
+    color: var(--basic-white);
+    font-size: 14px;
+    line-height: 21px;
+}
+
+::-moz-placeholder {
+    color: var(--basic-white);
+    font-size: 14px;
+    line-height: 21px;
+}
+
+
+
+
+:-moz-placeholder {
+    color: var(--basic-white);
+    font-size: 14px;
+    line-height: 21px;
+}
+
+
+
+
+:-ms-input-placeholder {
+    color: var(--basic-white);
+    font-size: 14px;
+    line-height: 21px;
+}*/
+
+.price-tag {
+    border: 3px solid var(--basic-white);
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--basic-white);
+    margin-top: 11px;
+    width: 317px;
+    height: 36px;
+}
+
+
+/*Search box*/
+
 .list-search {
     list-style: none;
 }
