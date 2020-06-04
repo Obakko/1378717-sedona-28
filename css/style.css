@@ -385,24 +385,52 @@ a {
     color: var(--basic-white);
 }
 
-.infrastructure input,
-.type-hous input {
+.checkbox-element {
     display: none;
 }
 
-.infrastructure label,
-.type-hous label {
+.checkbox-label {
     display: inline-block;
-    vertical-align: top;
+    vertical-align: middle;
     font-size: 14px;
     line-height: 21px;
+    padding-left: 40px;
     color: var(--basic-white);
-    width: 170px;
+    width: 137px;
     height: 40px;
+    background-image: url(../img/checkbox_off.svg);
+    background-repeat: no-repeat;
+    background-size: 27px 23px;
 }
 
-.infrastructure label::before,
-.type-hous label::before {
+.checkbox-element:checked+.checkbox-label {
+    background-image: url(../img/checkbox_on.svg);
+    background-position-x: 1.8px;
+}
+
+.checkbox-element:checked:disabled+.checkbox-label {
+    background-image: url(../img/checkbox_on_active.svg);
+    background-position-x: 1.8px;
+}
+
+.checkbox-element:disabled+.checkbox-label {
+    background-image: url(../img/checkbox_off_active.svg);
+}
+
+
+/*.checkbox-element:disabled+.checkbox-label::before {
+    background-image: url(../img/checkbox_off_active.svg);
+}
+
+.checkbox-element:checked:disabled+.checkbox-label::before {
+    background-image: url(../img/checkbox_on_active.svg);
+}
+*/
+
+
+/*
+.item-infrastructure label::before,
+.item-type-hous label::before {
     content: "";
     display: inline-block;
     vertical-align: bottom;
@@ -410,11 +438,13 @@ a {
     height: 23px;
     background-image: url(../img/checkbox-off.svg);
     background-repeat: no-repeat;
+    margin-right: 13px;
 }
 
-.infrastructure input:checked~.infrastructure label::before {
-    background-image: url(../img/checkbox_on.svg);
-}
+.item-infrastructure input:checked+.item-infrastructure label::before,
+.item-type-hous input:checked+.item-type-hous label::before {
+    background-image: url(../img/checkbox_on.svg);  
+} */
 
 
 /*Не могу сообразить как изменить checkbox*/

@@ -30,18 +30,33 @@
                 <form class="filter" action="https://echo.htmlacademy.ru" method="get">
                     <fieldset class="infrastructure">
                         <legend>Инфраструктура:</legend>
-                        <ul>
-                            <li><label><input type="checkbox" name="pool" checked>Бассейн</label></li>
-                            <li><label><input type="checkbox" name="parking">Парковка</label></li>
-                            <li><label><input type="checkbox" name="wifi">WI-fi</label></li>
+                        <ul class="list-infrastructure">
+                            <li><input class="checkbox-element" id="check-pool" type="checkbox" name="pool" disabled checked>
+                                <label class="checkbox-label" for="check-pool">Бассейн</label>
+                            </li>
+                            <li><input class="checkbox-element" id="check-parking" type="checkbox" name="parking" disabled>
+                                <label class="checkbox-label" for="check-parking">Парковка</label>
+                            </li>
+                            <li><input class="checkbox-element" id="check-wifi" type="checkbox" name="wifi">
+                                <label class="checkbox-label" for="check-wifi">WI-fi</label>
+                            </li>
                         </ul>
                     </fieldset>
                     <fieldset class="type-hous">
                         <legend>Тип жилья:</legend>
-                        <ul>
-                            <li><label><input type="checkbox" checked name="hotel">гостиница</label></li>
-                            <li><label><input type="checkbox" checked name="motel">мотель</label></li>
-                            <li><label><input type="checkbox" checked name="apartments">апартаменты</label></li>
+                        <ul class="list-type-hous">
+                            <li>
+                                <input class="checkbox-element" id="check-hotel" type="checkbox" checked name="hotel">
+                                <label class="checkbox-label" for="check-hotel">гостиница</label>
+                            </li>
+                            <li>
+                                <input class="checkbox-element" id="check-motel" type="checkbox" checked name="motel">
+                                <label class="checkbox-label" for="check-motel">мотель</label>
+                            </li>
+                            <li>
+                                <input class="checkbox-element" id="check-apartaments" type="checkbox" checked name="apartments">
+                                <label class="checkbox-label" for="check-apartaments">апартаменты</label>
+                            </li>
                         </ul>
                     </fieldset>
                     <div class="slider-box">
