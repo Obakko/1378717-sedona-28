@@ -42,7 +42,7 @@
 
 body {
     background-color: var(--basic-light-grey);
-    font-family: 'PT Sans', sans-serif, 'Arial', sans-serif;
+    font-family: 'PT Sans', 'Arial', sans-serif;
     color: var(--basic-black);
     text-transform: uppercase;
     font-size: 14px;
@@ -53,6 +53,7 @@ body {
     margin: 0 auto;
     max-width: 1200px;
     background-color: var(--basic-white);
+    box-shadow: 0px -5px 10px -5px var(--basic-light-black);
 }
 
 img {
@@ -153,38 +154,42 @@ a {
 .list-advantages {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .list-advantages li {
+    width: 400px;
     background-color: var(--basic-white);
     color: var(--basic-light-black);
     font-size: 14px;
     line-height: 21px;
-    height: 330px;
     flex-grow: 1;
+    text-align: center;
+    min-height: 330px;
+    padding: 160px 10px 82px;
+    background-repeat: no-repeat;
+    background-position: center 64px;
 }
 
 .list-advantages h3 {
     color: var(--basic-black);
     font-size: 21px;
     line-height: 21px;
+    margin-bottom: 25px;
 }
 
 .list-advantages li:nth-child(1) {
     background-image: url(../img/icon_home.svg);
-    background-repeat: no-repeat;
     background-size: 75px 72px;
 }
 
 .list-advantages li:nth-child(2) {
     background-image: url(../img/icon_food.svg);
-    background-repeat: no-repeat;
     background-size: 75px 70px;
 }
 
 .list-advantages li:nth-child(3) {
     background-image: url(../img/icon_souvenir.svg);
-    background-repeat: no-repeat;
     background-size: 64px 77px;
 }
 
@@ -355,6 +360,227 @@ a {
 
 /*Hotels site*/
 
+
+/*Search form*/
+
+.form-block {
+    background-image: url(../img/background_hottels.jpg);
+    background-repeat: no-repeat;
+    height: 217px;
+    width: 100%;
+}
+
+.filter {
+    display: flex;
+}
+
+.filter ul {
+    list-style: none;
+}
+
+.filter fieldset {
+    border: none;
+}
+
+.filter legend,
+.title-slider {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    color: var(--basic-white);
+}
+
+.checkbox-label {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 21px;
+    padding-left: 40px;
+    color: var(--basic-white);
+    width: 137px;
+    min-height: 23px;
+    margin-bottom: 25px;
+    background-image: url(../img/checkbox_off.svg);
+    background-repeat: no-repeat;
+    background-size: 27px 23px;
+}
+
+.checkbox-element:checked+.checkbox-label {
+    background-image: url(../img/checkbox_on.svg);
+    background-position-x: 2px;
+}
+
+.checkbox-element:checked:disabled+.checkbox-label {
+    background-image: url(../img/checkbox_on_active.svg);
+    background-position-x: 2px;
+}
+
+.checkbox-element:disabled+.checkbox-label {
+    background-image: url(../img/checkbox_off_active.svg);
+}
+
+
+/*.checkbox-element:disabled+.checkbox-label::before {
+    background-image: url(../img/checkbox_off_active.svg);
+}
+
+.checkbox-element:checked:disabled+.checkbox-label::before {
+    background-image: url(../img/checkbox_on_active.svg);
+}
+*/
+
+
+/*
+.item-infrastructure label::before,
+.item-type-hous label::before {
+    content: "";
+    display: inline-block;
+    vertical-align: bottom;
+    width: 27px;
+    height: 23px;
+    background-image: url(../img/checkbox-off.svg);
+    background-repeat: no-repeat;
+    margin-right: 13px;
+}
+
+.item-infrastructure input:checked+.item-infrastructure label::before,
+.item-type-hous input:checked+.item-type-hous label::before {
+    background-image: url(../img/checkbox_on.svg);  
+} */
+
+
+/*Не могу сообразить как изменить checkbox*/
+
+.price-tag {
+    border: 3px solid var(--basic-white);
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--basic-white);
+    margin-top: 11px;
+    width: 317px;
+    height: 36px;
+}
+
+.price-tag input {
+    border: none;
+    background-color: transparent;
+    width: 37px;
+    margin-left: 5px;
+    color: var(--basic-white);
+    font-size: 14px;
+    line-height: 21px;
+}
+
+
+/*тут Поменять стили в самом placeholder нужно, но у меня не вышло. Использовал совместимость с браузерами и не помогло
+
+::-webkit-input-placeholder {
+    color: var(--basic-white);
+    font-size: 14px;
+    line-height: 21px;
+}
+
+::-moz-placeholder {
+    color: var(--basic-white);
+    font-size: 14px;
+    line-height: 21px;
+}
+
+
+
+
+:-moz-placeholder {
+    color: var(--basic-white);
+    font-size: 14px;
+    line-height: 21px;
+}
+
+
+
+
+:-ms-input-placeholder {
+    color: var(--basic-white);
+    font-size: 14px;
+    line-height: 21px;
+}*/
+
+.result-button {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 7px 35px 8px 36px;
+    background-color: transparent;
+    border: 3px solid var(--basic-white);
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--basic-white);
+}
+
+.result-button:hover {
+    color: var(--basic-black);
+    background-color: var(--basic-white);
+    cursor: pointer;
+}
+
+.sorting-list h3 {
+    font-size: 21px;
+    line-height: 26px;
+}
+
+.sorting-list p,
+.sorting-list a {
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.sorting-list .active-item {
+    color: var(--basic-blue);
+    border-bottom: 1px dotted;
+}
+
+.sorting-item {
+    color: var(--basic-grey);
+}
+
+.sorting-item:hover {
+    color: var(--basic-blue);
+    border-bottom: 1px dotted var(--basic-blue)
+}
+
+.sorting-item:active {
+    color: var(--basic-black);
+    border: none;
+}
+
+.arrow-up {
+    display: inline-block;
+    vertical-align: middle;
+    width: 11px;
+    height: 10px;
+    background-image: url(../img/icon_dir.svg);
+}
+
+.arrow-down {
+    display: inline-block;
+    vertical-align: middle;
+    width: 11px;
+    height: 10px;
+    background-image: url(../img/icon_dir_active.svg);
+    transform: rotate(180deg);
+}
+
+.arrow-up:hover,
+.arrow-down:hover {
+    background-image: url(../img/icon_dir_hover.svg);
+}
+
+.arrow-up:active,
+.arrow-down:active {
+    background-image: url(../img/icon_dir_active.svg);
+}
+
+
+/*Search box*/
+
 .list-search {
     list-style: none;
 }
@@ -400,6 +626,8 @@ a {
 .details {
     background-color: var(--basic-blue);
     color: var(--basic-white);
+    display: inline-block;
+    vertical-align: middle;
     padding: 3px 16px 3px 17px;
 }
 
@@ -415,6 +643,8 @@ a {
 .reservation {
     background-color: var(--special-brown);
     color: var(--basic-white);
+    display: inline-block;
+    vertical-align: middle;
     padding: 3px 17px 3px 16px;
 }
 
@@ -457,6 +687,7 @@ a {
 
 .item-social a {
     display: inline-block;
+    vertical-align: top;
     background-color: var(--basic-blue);
     width: 46px;
     height: 48px;
