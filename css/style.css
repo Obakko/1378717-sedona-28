@@ -73,7 +73,6 @@ a {
 .button {
     font: inherit;
     text-align: center;
-    vertical-align: middle;
     font-size: 14px;
     line-height: 21px;
     text-transform: uppercase;
@@ -619,6 +618,14 @@ a {
     grid-gap: 29px;
 }
 
+.item-search img {
+    margin-top: 8px;
+}
+
+.name-hous {
+    margin-bottom: 7px;
+}
+
 .name-hous a {
     font-size: 21px;
     line-height: 26px;
@@ -636,6 +643,12 @@ a {
     display: inline-block;
     vertical-align: middle;
     color: var(--basic-light-black);
+    width: 110px;
+    margin-right: 2px;
+}
+
+.button-link {
+    margin-top: 15px;
 }
 
 .star span {
@@ -647,6 +660,7 @@ a {
 }
 
 .rating-paragraph {
+    margin-top: 50px;
     color: var(--basic-light-black);
     background-color: var(--special-light-grey);
 }
@@ -723,6 +737,13 @@ a {
     display: flex;
 }
 
+.phone-conteiner {
+    padding-top: 23px;
+    padding-bottom: 36px;
+    margin-left: 111px;
+    text-align: center;
+}
+
 .twitter,
 .facebook {
     margin-right: 6px;
@@ -790,6 +811,10 @@ a {
 
 
 /*Link for site HTMLacademy*/
+
+.link-html {
+    margin-right: 138px;
+}
 
 .link-html a {
     display: inline-block;
