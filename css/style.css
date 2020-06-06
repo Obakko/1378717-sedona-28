@@ -50,8 +50,12 @@ body {
 }
 
 .wrapper {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
     margin: 0 auto;
     max-width: 1200px;
+    position: relative;
     background-color: var(--basic-white);
     box-shadow: 0px -5px 10px -5px var(--basic-light-black);
 }
@@ -83,10 +87,25 @@ a {
     font-weight: bold;
     font-size: 14px;
     line-height: 26px;
+    position: relative;
+}
+
+.logo-link {
+    position: absolute;
+    left: 50%;
+    margin-left: -69px;
+    top: 0;
 }
 
 .list-navigation {
+    display: flex;
     list-style: none;
+    justify-content: space-around;
+}
+
+.list-navigation li {
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .list-navigation a:hover {
@@ -104,11 +123,20 @@ a {
 
 /*Section Heading*/
 
+.title-slogan {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .title-picture {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    background-color: var(--basic-white);
     background-image: url("../img/background_photo.jpg");
     background-repeat: no-repeat;
-    width: 1200px;
-    height: 509px;
+    min-height: 509px;
 }
 
 .title-picture::after {
@@ -121,6 +149,8 @@ a {
 }
 
 .heading-site h3 {
+    margin-top: 42px;
+    margin-bottom: 45px;
     font-size: 21px;
     line-height: 26px;
     text-align: center;
@@ -131,6 +161,7 @@ a {
     line-height: 26px;
     color: var(--basic-light-black);
     text-align: center;
+    margin-bottom: 51px;
 }
 
 
@@ -208,7 +239,16 @@ a {
 
 /* Section voucher*/
 
+.voucher-section {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2 min-content);
+    position: relative;
+}
+
 .subtitle {
+    margin-top: 58px;
+    margin-bottom: 35px;
     font-weight: bold;
     font-size: 30px;
     line-height: 24px;
@@ -216,6 +256,7 @@ a {
 }
 
 .text {
+    margin-bottom: 50px;
     font-size: 14px;
     line-height: 24px;
     color: var(--basic-light-black);
@@ -230,6 +271,7 @@ a {
     line-height: 26px;
     text-align: center;
     background-color: var(--special-brown);
+    padding: 30px 139px 30px 139px;
 }
 
 .button-popup:hover {
@@ -242,16 +284,24 @@ a {
 }
 
 .popup-element {
+    width: 568px;
+    position: absolute;
+    top: 301px;
+    left: 316px;
     font-weight: bold;
     font-size: 14px;
     line-height: 26px;
+    background-color: var(--basic-white);
+    box-shadow: 0 0 10px -5px var(--basic-black);
+    padding: 55px;
 }
 
 .popup-element input {
     border: none;
     background-color: var(--special-light-grey);
     font: inherit;
-    padding: 5px 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
 
 
@@ -265,6 +315,7 @@ a {
     line-height: 26px;
     color: var(--basic-white);
     text-align: center;
+    padding: 16px 196px;
 }
 
 .popup-element button[type="submit"]:hover {
@@ -419,38 +470,6 @@ a {
     background-image: url(../img/checkbox_off_active.svg);
 }
 
-
-/*.checkbox-element:disabled+.checkbox-label::before {
-    background-image: url(../img/checkbox_off_active.svg);
-}
-
-.checkbox-element:checked:disabled+.checkbox-label::before {
-    background-image: url(../img/checkbox_on_active.svg);
-}
-*/
-
-
-/*
-.item-infrastructure label::before,
-.item-type-hous label::before {
-    content: "";
-    display: inline-block;
-    vertical-align: bottom;
-    width: 27px;
-    height: 23px;
-    background-image: url(../img/checkbox-off.svg);
-    background-repeat: no-repeat;
-    margin-right: 13px;
-}
-
-.item-infrastructure input:checked+.item-infrastructure label::before,
-.item-type-hous input:checked+.item-type-hous label::before {
-    background-image: url(../img/checkbox_on.svg);  
-} */
-
-
-/*Не могу сообразить как изменить checkbox*/
-
 .price-tag {
     border: 3px solid var(--basic-white);
     font-size: 14px;
@@ -593,6 +612,13 @@ a {
     border-bottom: 2px solid var(--special-light-grey);
 }
 
+.item-search {
+    display: grid;
+    grid-template-columns: 135px 1fr min-content;
+    padding: 30px 73px;
+    grid-gap: 29px;
+}
+
 .name-hous a {
     font-size: 21px;
     line-height: 26px;
@@ -607,6 +633,8 @@ a {
 }
 
 .item-search p {
+    display: inline-block;
+    vertical-align: middle;
     color: var(--basic-light-black);
 }
 
@@ -684,6 +712,21 @@ a {
 
 
 /*Social link*/
+
+.footer-contacts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-social {
+    display: flex;
+}
+
+.twitter,
+.facebook {
+    margin-right: 6px;
+}
 
 .item-social a {
     display: inline-block;
