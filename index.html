@@ -82,42 +82,42 @@
                 </ul>
             </section>
             <section class="voucher-section">
-                <div>
-                    <h3 class="visually-hidden">Оформить путевку</h3>
-                    <p class="subtitle">Заинтересовались?</p>
-                    <p class="text">
-                        Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшее предложения гостиниц в седоне
-                    </p>
+                <h3 class="visually-hidden">Оформить путевку</h3>
+                <p class="subtitle">Заинтересовались?</p>
+                <p class="text">
+                    Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшее предложения гостиниц в седоне
+                </p>
+                <div class="wrapper-popup">
                     <button class="button button-popup" type="button">поиск гостиницы в седоне</button>
-                </div>
-                <div class="popup-element">
-                    <form action="https://echo.htmlacademy.ru/" method="post">
-                        <p class="date-arrival">
-                            <label for="arrival_date">Дата заезда:</label>
-                            <input type="text" name="date-arrival" id="arrival_date" placeholder="24 апреля 2017">
-                            <button class="button" type="button" aria-label="Кнопка календаря"></button>
-                        </p>
-                        <p class="date-departure">
-                            <label for="departure_date">Дата выезда:</label>
-                            <input type="text" name="date-departure" id="departure_date" placeholder="4 июля 2017">
-                            <button type="button" class="button" aria-label="Кнопка календаря"></button>
-                        </p>
-                        <p class="number-people">
-                            <span class="adults">
+                    <div class="popup-element">
+                        <form action="https://echo.htmlacademy.ru/" method="post">
+                            <p class="date-arrival">
+                                <label for="arrival_date">Дата заезда:</label>
+                                <input type="text" name="date-arrival" id="arrival_date" placeholder="24 апреля 2017">
+                                <button class="button" type="button" aria-label="Кнопка календаря"></button>
+                            </p>
+                            <p class="date-departure">
+                                <label for="departure_date">Дата выезда:</label>
+                                <input type="text" name="date-departure" id="departure_date" placeholder="4 июля 2017">
+                                <button type="button" class="button" aria-label="Кнопка календаря"></button>
+                            </p>
+                            <p class="number-people">
+                                <span class="adults">
                                 <label for="for_adults">Взрослые:</label>
                                 <button class="minus button" type="button" aria-label="Кнопка минус"></button>
                                 <input type="text" name="adult" id="for_adults" placeholder="2">
                                 <button class="plus button" type="button" aria-label="кнопка плюс"></button>
                             </span>
-                            <span class="childs">
+                                <span class="childs">
                                 <label for="for_children">Дети:</label>
                                 <button class="minus button" type="button" aria-label="Кнопка минус"></button>
                                 <input type="text" name="child" id="for_children" placeholder="0">
                                 <button class="plus button" type="button" aria-label="кнопка плюс"></button>
                             </span>
-                        </p>
-                        <button class="button" type="submit">Найти</button>
-                    </form>
+                            </p>
+                            <button class="button" type="submit">Найти</button>
+                        </form>
+                    </div>
                 </div>
                 <img src="img/map.png" width="1200" height="594" alt="Карта местоположение">
             </section>

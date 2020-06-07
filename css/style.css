@@ -40,7 +40,12 @@
     overflow: hidden;
 }
 
+html {
+    height: 100%;
+}
+
 body {
+    height: 100%;
     background-color: var(--basic-light-grey);
     font-family: 'PT Sans', 'Arial', sans-serif;
     color: var(--basic-black);
@@ -240,26 +245,27 @@ a {
 
 .voucher-section {
     text-align: center;
-    display: grid;
-    grid-template-columns: repeat(2 min-content);
-    position: relative;
+    padding-top: 58px;
 }
 
 .subtitle {
-    margin-top: 58px;
     margin-bottom: 35px;
+    padding: 0 200px;
     font-weight: bold;
     font-size: 30px;
     line-height: 24px;
-    text-align: center;
 }
 
 .text {
+    padding: 0 100px;
     margin-bottom: 50px;
     font-size: 14px;
     line-height: 24px;
     color: var(--basic-light-black);
-    text-align: center;
+}
+
+.wrapper-popup {
+    position: relative;
 }
 
 .button-popup {
@@ -285,7 +291,7 @@ a {
 .popup-element {
     width: 568px;
     position: absolute;
-    top: 301px;
+    top: 86px;
     left: 316px;
     font-weight: bold;
     font-size: 14px;
@@ -643,7 +649,7 @@ a {
     display: inline-block;
     vertical-align: middle;
     color: var(--basic-light-black);
-    width: 110px;
+    min-width: 110px;
     margin-right: 2px;
 }
 
@@ -651,7 +657,12 @@ a {
     margin-top: 15px;
 }
 
+.star {
+    text-align: end;
+}
+
 .star span {
+    margin-left: 4px;
     display: inline-block;
     vertical-align: middle;
     background: url(../img/star.svg) repeat-x;
