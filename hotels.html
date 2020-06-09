@@ -17,7 +17,7 @@
                     <li><a href="#">Информация</a></li>
                     <li><a href="#">Фото и видео</a></li>
                     <li><a href="#">Карта штата</a></li>
-                    <li><a class="is-active" href="hotels.html">Гостиницы</a></li>
+                    <li><a href="hotels.html">Гостиницы</a></li>
                 </ul>
             </nav>
             <a class="logo-link" href="index.html">
@@ -59,15 +59,33 @@
                             </li>
                         </ul>
                     </fieldset>
-                    <div class="slider-box">
+                    <fieldset class="filter-item">
+                        <legend>стоимость в сутки(р):</legend>
+                        <div class="price-controls">
+                            <label class="min-price">
+                                от <input type="text" name="min-price" value="0">
+                            </label>
+                            <label class="max-price">
+                                до <input type="text" name="max-price" value="3000">
+                            </label>
+                        </div>
+                        <div class="range-filter">
+                            <div class="scale">
+                                <div class="bar"></div>
+                            </div>
+                            <div class="toggle toggle-min"></div>
+                            <div class="toggle toggle-max"></div>
+                        </div>
+                        <button class="button result-button" type="submit">Показать</button>
+                    </fieldset>
+                    <!--<div class="slider-box">
                         <p class="title-slider">стоимость в сутки(р):</p>
                         <p class="price-tag">
                             <label>от<input type="text" name="after" placeholder="0"></label>
                             <label>до<input type="text" name="before" placeholder="3000"></label>
-                        </p>
-                        <div class="slider"><span></span><span></span></div>
-                        <button class="button result-button" type="submit">Показать</button>
-                    </div>
+                        </p>/
+                        <div class="slider"><span></span><span></span></div>-->
+
                 </form>
             </section>
             <section>
