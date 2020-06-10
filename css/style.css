@@ -189,8 +189,8 @@ a {
 }
 
 .wrapper-for-title {
-    flex-grow: 1;
-    min-width: 400px;
+    flex-shrink: 0;
+    width: 400px;
     padding: 50px 49px;
 }
 
@@ -199,10 +199,9 @@ a {
     flex-grow: 2;
 }
 
-.third,
-.fourth,
-.fifth {
-    flex-grow: 1;
+.last {
+    flex-grow: 0;
+    width: 33.33%;
     background-color: var(--basic-light-grey);
     min-height: 256px;
     text-align: center;
@@ -263,9 +262,7 @@ a {
     background-size: 64px 77px;
 }
 
-.third p,
-.fourth p,
-.fifth p {
+.last p {
     color: var(--basic-light-black);
 }
 
@@ -451,29 +448,25 @@ a {
 .form-block {
     background-image: url(../img/background_hottels.jpg);
     background-repeat: no-repeat;
+    background-size: 100% 100%;
     min-height: 217px;
     width: 100%;
+    padding: 27px 73px 32px 112px;
 }
 
 .filter {
     display: flex;
-    padding-top: 27px;
 }
 
 .infrastructure {
     margin-right: 117px;
-    margin-left: 72px;
-}
-
-.type-hous {
-    margin-right: auto;
 }
 
 .filter ul {
     list-style: none;
 }
 
-.filter li {
+.filter li:not(:last-child) {
     margin-bottom: 25px;
 }
 
@@ -517,6 +510,10 @@ a {
 
 .checkbox-element:disabled+.checkbox-label {
     background-image: url(../img/checkbox_off_active.svg);
+}
+
+.filter-item {
+    margin-left: auto;
 }
 
 .filter-item legend {
@@ -626,8 +623,8 @@ a {
 
 .sorting-list {
     display: flex;
-    min-height: 86px;
-    padding: 29px 73px;
+    padding: 29px 73px 31px;
+    align-items: center;
 }
 
 .sorting-list h3 {
@@ -640,7 +637,6 @@ a {
 .sorting-list a {
     font-size: 12px;
     line-height: 18px;
-    padding-top: 2px;
 }
 
 .sorting-list p {
@@ -655,7 +651,6 @@ a {
 .sorting-item {
     color: var(--basic-grey);
     margin-right: 33px;
-    align-self: flex-start;
 }
 
 .sorting-item:hover {
@@ -676,7 +671,6 @@ a {
     margin-left: auto;
     margin-right: 12px;
     background-image: url(../img/icon_dir.svg);
-    align-self: center;
 }
 
 .arrow-down {
@@ -686,7 +680,6 @@ a {
     height: 10px;
     background-image: url(../img/icon_dir_active.svg);
     transform: rotate(180deg);
-    align-self: center;
 }
 
 .arrow-up:hover,
