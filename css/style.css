@@ -60,7 +60,6 @@ body {
     grid-template-rows: min-content 1fr min-content;
     margin: 0 auto;
     max-width: 1200px;
-    position: relative;
     background-color: var(--basic-white);
     box-shadow: 0px -5px 10px -5px var(--basic-light-black);
 }
@@ -172,18 +171,53 @@ a {
 /*Section information*/
 
 .list-location {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: stretch;
     list-style: none;
 }
 
 .first,
 .second {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
     background-color: var(--basic-blue);
     color: var(--basic-white);
+    text-align: center;
+}
+
+.wrapper-for-title {
+    flex-shrink: 0;
+    width: 400px;
+    padding: 50px 49px;
+}
+
+.first img,
+.second img {
+    flex-grow: 2;
+}
+
+.last {
+    flex-grow: 0;
+    width: 33.33%;
+    background-color: var(--basic-light-grey);
+    min-height: 256px;
+    text-align: center;
+    padding-bottom: 54px;
+    padding: 50px 49px;
 }
 
 .item-location h3 {
     font-size: 21px;
     line-height: 21px;
+    margin-bottom: 25px;
+}
+
+.item-location span {
+    display: block;
+    margin-bottom: 23px;
 }
 
 .list-advantages {
@@ -228,15 +262,7 @@ a {
     background-size: 64px 77px;
 }
 
-.third,
-.fourth,
-.fifth {
-    background-color: var(--basic-light-grey);
-}
-
-.third p,
-.fourth p,
-.fifth p {
+.last p {
     color: var(--basic-light-black);
 }
 
@@ -422,28 +448,39 @@ a {
 .form-block {
     background-image: url(../img/background_hottels.jpg);
     background-repeat: no-repeat;
-    height: 217px;
+    background-size: 100% 100%;
+    min-height: 217px;
     width: 100%;
+    padding: 27px 73px 32px 112px;
 }
 
 .filter {
     display: flex;
 }
 
+.infrastructure {
+    margin-right: 117px;
+}
+
 .filter ul {
     list-style: none;
 }
 
+.filter li:not(:last-child) {
+    margin-bottom: 25px;
+}
+
 .filter fieldset {
+    padding: 0;
     border: none;
 }
 
-.filter legend,
-.title-slider {
+.filter legend {
     font-weight: bold;
     font-size: 16px;
     line-height: 21px;
     color: var(--basic-white);
+    margin-bottom: 23px;
 }
 
 .checkbox-label {
@@ -455,10 +492,10 @@ a {
     color: var(--basic-white);
     width: 137px;
     min-height: 23px;
-    margin-bottom: 25px;
     background-image: url(../img/checkbox_off.svg);
     background-repeat: no-repeat;
     background-size: 27px 23px;
+    cursor: pointer;
 }
 
 .checkbox-element:checked+.checkbox-label {
@@ -475,17 +512,38 @@ a {
     background-image: url(../img/checkbox_off_active.svg);
 }
 
-.price-tag {
-    border: 3px solid var(--basic-white);
+.filter-item {
+    margin-left: auto;
+}
+
+.filter-item legend {
+    margin-bottom: 11px;
+}
+
+.price-controls {
+    display: flex;
+    align-items: center;
+    min-width: 317px;
+    height: 36px;
+    border: 2px solid var(--basic-white);
     font-size: 14px;
     line-height: 21px;
     color: var(--basic-white);
-    margin-top: 11px;
-    width: 317px;
-    height: 36px;
+    text-align: center;
 }
 
-.price-tag input {
+.min-price {
+    flex-grow: 1;
+    border-right: 1px solid var(--basic-white);
+}
+
+.max-price {
+    flex-grow: 1;
+    border-left: 1px solid var(--basic-white);
+}
+
+.min-price input,
+.max-price input {
     border: none;
     background-color: transparent;
     width: 37px;
@@ -495,38 +553,53 @@ a {
     line-height: 21px;
 }
 
-
-/*тут Поменять стили в самом placeholder нужно, но у меня не вышло. Использовал совместимость с браузерами и не помогло
-
-::-webkit-input-placeholder {
-    color: var(--basic-white);
-    font-size: 14px;
-    line-height: 21px;
+.range-filter {
+    margin-top: 11px;
+    position: relative;
+    margin-bottom: 33px;
+    margin-top: 20px;
 }
 
-::-moz-placeholder {
-    color: var(--basic-white);
-    font-size: 14px;
-    line-height: 21px;
+.scale {
+    width: 316px;
+    height: 2px;
+    background-color: var(--basic-grey);
 }
 
-
-
-
-:-moz-placeholder {
-    color: var(--basic-white);
-    font-size: 14px;
-    line-height: 21px;
+.bar {
+    width: 78%;
+    height: 2px;
+    background-color: var(--basic-white);
 }
 
+.toggle {
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    padding: 0;
+    border: 8px solid var(--basic-white);
+    background-color: var(--basic-grey);
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 var(--basic-grey);
+    top: -8px;
+}
 
+.toggle-min {
+    left: 0%;
+}
 
+.toggle-max {
+    left: 78%;
+}
 
-:-ms-input-placeholder {
-    color: var(--basic-white);
-    font-size: 14px;
-    line-height: 21px;
-}*/
+.toggle:hover {
+    width: 23px;
+    height: 23px;
+    top: -11px;
+    border: 9px solid var(--basic-white);
+    box-shadow: 0 4px 1px 0 var(--basic-grey);
+    cursor: pointer;
+}
 
 .result-button {
     display: inline-block;
@@ -545,15 +618,29 @@ a {
     cursor: pointer;
 }
 
+
+/* section sorting search*/
+
+.sorting-list {
+    display: flex;
+    padding: 29px 73px 31px;
+    align-items: center;
+}
+
 .sorting-list h3 {
     font-size: 21px;
     line-height: 26px;
+    margin-right: 46px;
 }
 
 .sorting-list p,
 .sorting-list a {
     font-size: 12px;
     line-height: 18px;
+}
+
+.sorting-list p {
+    margin-right: 40px;
 }
 
 .sorting-list .active-item {
@@ -563,6 +650,7 @@ a {
 
 .sorting-item {
     color: var(--basic-grey);
+    margin-right: 33px;
 }
 
 .sorting-item:hover {
@@ -580,6 +668,8 @@ a {
     vertical-align: middle;
     width: 11px;
     height: 10px;
+    margin-left: auto;
+    margin-right: 12px;
     background-image: url(../img/icon_dir.svg);
 }
 
