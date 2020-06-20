@@ -32,7 +32,7 @@
                 <img src="img/welcome.svg" width="457" height="351" alt="Заголовок">
             </span>
                 </div>
-                <h3>Седона-небольшой городок в аризоне,<br> заслуживающий большего!</h3>
+                <h3>Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</h3>
                 <p>Рассмотрим 5 причин, по которым седона круче, чем гранд каньон!</p>
             </section>
             <section class="information">
@@ -99,37 +99,41 @@
                         <form action="https://echo.htmlacademy.ru/" method="post">
                             <p class="date-arrival">
                                 <label for="arrival_date">Дата заезда:</label>
-                                <input type="text" name="date-arrival" id="arrival_date" placeholder="24 апреля 2017">
+                                <input type="text" name="date-arrival" id="arrival_date" value="24 апреля 2017">
                                 <button class="button" type="button" aria-label="Кнопка календаря"></button>
                             </p>
                             <p class="date-departure">
                                 <label for="departure_date">Дата выезда:</label>
-                                <input type="text" name="date-departure" id="departure_date" placeholder="4 июля 2017">
+                                <input type="text" name="date-departure" id="departure_date" value="4 июля 2017">
                                 <button type="button" class="button" aria-label="Кнопка календаря"></button>
                             </p>
                             <p class="number-people">
                                 <span class="adults">
-                                <label for="for_adults">Взрослые:</label>
-                                <button class="minus button" type="button" aria-label="Кнопка минус"></button>
-                                <input type="text" name="adult" id="for_adults" placeholder="2">
-                                <button class="plus button" type="button" aria-label="кнопка плюс"></button>
-                            </span>
+                                    <label for="for_adults">Взрослые:</label>
+                                    <button class="minus button" type="button" aria-label="Кнопка минус"></button>
+                                    <input type="text" name="adult" id="for_adults" value="2">
+                                    <button class="plus button" type="button" aria-label="кнопка плюс"></button>
+                                </span>
                                 <span class="childs">
-                                <label for="for_children">Дети:</label>
-                                <button class="minus button" type="button" aria-label="Кнопка минус"></button>
-                                <input type="text" name="child" id="for_children" placeholder="0">
-                                <button class="plus button" type="button" aria-label="кнопка плюс"></button>
-                            </span>
+                                    <label for="for_children">Дети:</label>
+                                    <button class="minus button" type="button" aria-label="Кнопка минус"></button>
+                                    <input type="text" name="child" id="for_children" value="0">
+                                    <button class="plus button" type="button" aria-label="кнопка плюс"></button>
+                                </span>
                             </p>
                             <button class="button" type="submit">Найти</button>
                         </form>
                     </div>
                 </div>
-                <img src="img/map.png" width="1200" height="594" alt="Карта местоположение">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d995283.2727906042!2d-112.19327625740678!3d34.97519313169195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1591779855524!5m2!1sru!2sru" style="border:0;" allowfullscreen=""
+                    aria-hidden="false" tabindex="0"></iframe>
             </section>
         </main>
-        <footer class="footer-contacts">
-            <p class="phone-conteiner">#visitSEDONA<br> ТЕЛ: <a href="tel:+74956660166">+7(495) 666-01-66</a></p>
+        <footer class="footer-contacts on-top">
+            <div class="phone-conteiner">
+                <p>#visitSEDONA</p>
+                <p>ТЕЛ: <a href="tel:+74956660166">+7(495) 666-01-66</a></p>
+            </div>
             <ul class="list-social">
                 <li class="item-social twitter">
                     <a href="#" aria-label="Ссылка Twitter"></a>
