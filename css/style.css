@@ -118,6 +118,7 @@ a {
 
 .list-navigation li {
     width: 20%;
+}
 
 .list-navigation li:nth-child(2) {
     padding-left: 17px;
@@ -149,7 +150,7 @@ a {
 
 .list-navigation li:nth-child(3) {
     margin-right: 147px;
-}*/
+} */
 
 .list-navigation li:hover {
     color: var(--basic-blue);
@@ -684,7 +685,6 @@ a {
     margin-top: 11px;
     position: relative;
     margin-bottom: 33px;
-    /*margin-top: 20px;*/
 }
 
 .scale {
