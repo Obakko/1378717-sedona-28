@@ -98,7 +98,7 @@ a {
     line-height: 26px;
     position: relative;
     min-height: 56px;
-    padding: 15px 72px;
+    padding: 15px 0;
 }
 
 .logo-link {
@@ -118,6 +118,14 @@ a {
 
 .list-navigation li {
     width: 25%;
+}
+
+.list-navigation li:nth-child(1) {
+    padding-left: 72px;
+}
+
+.list-navigation li:nth-child(4) {
+    padding-right: 72px;
 }
 
 .list-navigation li:nth-child(3),
@@ -174,7 +182,6 @@ a {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    background-color: var(--basic-white);
     background-color: var(--basic-grey);
     background-image: url("../img/background_photo.jpg");
     background-repeat: no-repeat;
@@ -232,7 +239,7 @@ a {
 .wrapper-for-title {
     flex-shrink: 0;
     width: 400px;
-    padding: 50px 49px;
+    padding: 50px 49px 0;
 }
 
 .first img,
@@ -247,18 +254,18 @@ a {
     min-height: 256px;
     text-align: center;
     padding-bottom: 54px;
-    padding: 50px 49px;
+    padding: 48px 49px;
 }
 
 .item-location h3 {
     font-size: 21px;
     line-height: 21px;
-    margin-bottom: 25px;
+    margin-bottom: 28px;
 }
 
 .item-location span {
     display: block;
-    margin-bottom: 25px;
+    margin-bottom: 24px;
 }
 
 .list-advantages {
@@ -276,7 +283,7 @@ a {
     flex-grow: 1;
     text-align: center;
     min-height: 330px;
-    padding: 160px 10px 82px;
+    padding: 160px 50px 82px;
     background-repeat: no-repeat;
     background-position: center 64px;
 }
@@ -285,22 +292,25 @@ a {
     color: var(--basic-black);
     font-size: 21px;
     line-height: 21px;
-    margin-bottom: 25px;
+    margin-bottom: 29px;
 }
 
 .list-advantages li:nth-child(1) {
     background-image: url(../img/icon_home.svg);
     background-size: 75px 72px;
+    background-position-y: 60px;
 }
 
 .list-advantages li:nth-child(2) {
     background-image: url(../img/icon_food.svg);
     background-size: 75px 70px;
+    background-position-y: 61px;
 }
 
 .list-advantages li:nth-child(3) {
     background-image: url(../img/icon_souvenir.svg);
     background-size: 64px 77px;
+    background-position-y: 55px;
 }
 
 .last p {
@@ -316,7 +326,7 @@ a {
 }
 
 .subtitle {
-    margin-bottom: 33px;
+    margin-bottom: 30px;
     padding: 0 200px;
     font-weight: bold;
     font-size: 30px;
@@ -325,7 +335,7 @@ a {
 
 .text {
     padding: 0 100px;
-    margin-bottom: 43px;
+    margin-bottom: 45px;
     font-size: 14px;
     line-height: 24px;
     color: var(--basic-light-black);
@@ -356,6 +366,7 @@ a {
 }
 
 .popup-element {
+    display: none;
     width: 568px;
     position: absolute;
     top: 86px;
@@ -367,6 +378,11 @@ a {
     background-color: var(--basic-white);
     box-shadow: 0 0 10px -5px var(--basic-black);
     padding: 55px;
+}
+
+.modal-popup {
+    display: block;
+    animation: bounce 0.6s;
 }
 
 .popup-element input {
@@ -557,13 +573,13 @@ a {
 /*Search form*/
 
 .form-block {
-    background-color: var(--special-light-grey);
+    background-color: var(--basic-grey);
     background-image: url(../img/background_hottels.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     min-height: 217px;
     width: 100%;
-    padding: 25px 73px 25px 112px;
+    padding: 25px 73px 25px 72px;
 }
 
 .filter {
@@ -571,7 +587,7 @@ a {
 }
 
 .infrastructure {
-    margin-right: 117px;
+    margin-right: 118px;
 }
 
 .filter ul {
@@ -579,7 +595,7 @@ a {
 }
 
 .filter li:not(:last-child) {
-    margin-bottom: 25px;
+    margin-bottom: 23px;
 }
 
 .filter fieldset {
@@ -592,7 +608,7 @@ a {
     font-size: 16px;
     line-height: 21px;
     color: var(--basic-white);
-    margin-bottom: 23px;
+    margin-bottom: 25px;
 }
 
 .checkbox-label {
@@ -608,6 +624,13 @@ a {
     background-repeat: no-repeat;
     background-size: 27px 23px;
     cursor: pointer;
+}
+
+.checkbox-element:focus+.checkbox-label,
+.checkbox-element:checked:focus+.checkbox-label,
+.checkbox-element:checked:disabled:focus+.checkbox-label,
+.checkbox-element:disabled:focus+.checkbox-label {
+    opacity: 0.7;
 }
 
 .checkbox-element:checked+.checkbox-label {
@@ -630,29 +653,33 @@ a {
 }
 
 .filter-item legend {
-    margin-bottom: 11px;
+    margin-bottom: 12px;
     text-align: start;
 }
 
 .price-controls {
     display: flex;
     align-items: center;
-    min-width: 317px;
+    width: 317px;
     height: 36px;
     border: 2px solid var(--basic-white);
     font-size: 14px;
     line-height: 21px;
     color: var(--basic-white);
     text-align: center;
+    margin-bottom: 20px;
+    padding-left: 2px;
 }
 
 .min-price {
-    flex-grow: 1;
+    width: 50%;
+    padding-left: 45px;
     border-right: 1px solid var(--basic-white);
 }
 
 .max-price {
-    flex-grow: 1;
+    width: 50%;
+    padding-left: 25px;
     border-left: 1px solid var(--basic-white);
 }
 
@@ -660,15 +687,13 @@ a {
 .max-price input {
     border: none;
     background-color: transparent;
-    width: 37px;
-    margin-left: 5px;
+    width: 50px;
     color: var(--basic-white);
     font-size: 14px;
     line-height: 21px;
 }
 
 .range-filter {
-    margin-top: 11px;
     position: relative;
     margin-bottom: 33px;
 }
@@ -680,7 +705,7 @@ a {
 }
 
 .bar {
-    width: 78%;
+    width: 80%;
     height: 2px;
     background-color: var(--basic-white);
 }
@@ -702,7 +727,7 @@ a {
 }
 
 .toggle-max {
-    left: 78%;
+    left: 80%;
 }
 
 .toggle:hover {
@@ -717,7 +742,7 @@ a {
 .result-button {
     display: inline-block;
     vertical-align: middle;
-    padding: 7px 35px 8px 36px;
+    padding: 5px 35px 6px 36px;
     background-color: transparent;
     border: 2px solid var(--basic-white);
     font-size: 14px;
@@ -859,7 +884,7 @@ a {
 }
 
 .button-link {
-    margin-top: 15px;
+    margin-top: 14px;
 }
 
 .list-search div:last-child {
@@ -891,7 +916,7 @@ a {
     color: var(--basic-white);
     display: inline-block;
     vertical-align: middle;
-    padding: 3px 16px 3px 17px;
+    padding: 3px 16px 2px 17px;
     margin-right: 2px;
 }
 
@@ -909,7 +934,7 @@ a {
     color: var(--basic-white);
     display: inline-block;
     vertical-align: middle;
-    padding: 3px 17px 3px 16px;
+    padding: 3px 17px 2px 16px;
 }
 
 .reservation:hover {
@@ -1068,4 +1093,22 @@ a {
 
 .link-html a:active {
     background-image: url(../img/logo_htmlacademy_focus.svg);
+}
+
+
+/* animation */
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-1000px);
+    }
+    70% {
+        transform: translateY(30px);
+    }
+    90% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
