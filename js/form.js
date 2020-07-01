@@ -1,7 +1,7 @@
 var buttonSearch = document.querySelector('.button-popup');
 var windowPopup = document.querySelector('.popup-element');
 console.log(buttonSearch);
-buttonSearch.addEventListener("click", function() {
+buttonSearch.addEventListener("click", function(evt) {
     evt.preventDefault();
-    windowPopup.toggleClass('popup-element')
+    windowPopup.classList.toggle('modal-popup')
 });
