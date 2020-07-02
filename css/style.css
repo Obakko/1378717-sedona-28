@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 2 version,not dead,not ie <= 11
+*/
+
 :root {
     --basic-light-grey: #EEEEEE;
     --basic-white: #ffffff;
@@ -40,6 +47,7 @@ iframe {
     border: 0;
     padding: 0;
     white-space: nowrap;
+    -webkit-clip-path: inset(100%);
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
@@ -62,6 +70,7 @@ body {
 .wrapper {
     min-height: 100%;
     display: grid;
+    grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
     grid-template-rows: min-content 1fr min-content;
     margin: 0 auto;
     max-width: 1200px;
@@ -133,25 +142,6 @@ a {
     text-align: end;
 }
 
-
-/*
-.list-navigation li:nth-child(4)~li {
-    flex-grow: 1;
-    margin: 30px 10px 0 10px;
-}
-
-.list-navigation li:nth-child(1) {
-    margin-right: 134px;
-}
-
-.list-navigation li:nth-child(2) {
-    margin-right: 418px;
-}
-
-.list-navigation li:nth-child(3) {
-    margin-right: 147px;
-} */
-
 .list-navigation li:hover {
     color: var(--basic-blue);
 }
@@ -168,13 +158,13 @@ a {
 /*Section Heading*/
 
 .heading-site {
-    margin-bottom: 51px;
+    margin-bottom: 54px;
 }
 
 .title-slogan {
     display: inline-block;
     vertical-align: middle;
-    margin-bottom: 21px;
+    margin-bottom: 18px;
 }
 
 .title-picture {
@@ -202,7 +192,7 @@ a {
 }
 
 .heading-site h3 {
-    margin-bottom: 45px;
+    margin-bottom: 43px;
     font-size: 21px;
     line-height: 26px;
     text-align: center;
@@ -239,7 +229,7 @@ a {
 .wrapper-for-title {
     flex-shrink: 0;
     width: 400px;
-    padding: 50px 49px 0;
+    padding: 45px 49px 0;
 }
 
 .first img,
@@ -260,18 +250,22 @@ a {
 .item-location h3 {
     font-size: 21px;
     line-height: 21px;
-    margin-bottom: 28px;
+    margin-bottom: 26px;
 }
 
 .item-location span {
     display: block;
-    margin-bottom: 24px;
+    margin-bottom: 25px;
 }
 
 .list-advantages {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
+}
+
+.second .wrapper-for-title {
+    padding-top: 49px;
 }
 
 .list-advantages li {
@@ -282,35 +276,43 @@ a {
     line-height: 21px;
     flex-grow: 1;
     text-align: center;
-    min-height: 330px;
-    padding: 160px 50px 82px;
+    min-height: 328px;
+    padding: 157px 50px 35px;
     background-repeat: no-repeat;
-    background-position: center 64px;
+    background-position: center;
 }
 
 .list-advantages h3 {
     color: var(--basic-black);
     font-size: 21px;
     line-height: 21px;
-    margin-bottom: 29px;
+    margin-bottom: 27px;
 }
 
 .list-advantages li:nth-child(1) {
     background-image: url(../img/icon_home.svg);
     background-size: 75px 72px;
-    background-position-y: 60px;
+    background-position-y: 58px;
 }
 
 .list-advantages li:nth-child(2) {
     background-image: url(../img/icon_food.svg);
     background-size: 75px 70px;
-    background-position-y: 61px;
+    background-position-y: 59px;
 }
 
 .list-advantages li:nth-child(3) {
     background-image: url(../img/icon_souvenir.svg);
     background-size: 64px 77px;
-    background-position-y: 55px;
+    background-position-y: 54px;
+}
+
+.last {
+    padding-top: 47px;
+}
+
+.last span {
+    margin-bottom: 24px;
 }
 
 .last p {
@@ -382,7 +384,8 @@ a {
 
 .modal-popup {
     display: block;
-    animation: bounce 0.6s;
+    -webkit-animation: bounce 0.5s;
+    animation: bounce 0.5s;
 }
 
 .popup-element input {
@@ -849,6 +852,7 @@ a {
 
 .item-search {
     display: grid;
+    grid-template-columns: 135px 1fr -webkit-min-content;
     grid-template-columns: 135px 1fr min-content;
     padding: 23px 70px 29px 73px;
     grid-gap: 29px;
@@ -1098,15 +1102,36 @@ a {
 
 /* animation */
 
-@keyframes bounce {
+@-webkit-keyframes bounce {
     0% {
-        transform: translateY(-1000px);
+        clip: rect(550px, auto, auto, auto);
+        transform: translateY(-550px)
     }
     70% {
-        transform: translateY(30px);
+        clip: rect(0px, auto, auto, auto);
+        transform: translateY(0);
     }
     90% {
-        transform: translateY(-10px);
+        clip: rect(0px, auto, auto, auto);
+        transform: translateY(20px)
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        clip: rect(550px, auto, auto, auto);
+        transform: translateY(-550px)
+    }
+    70% {
+        clip: rect(0px, auto, auto, auto);
+        transform: translateY(0);
+    }
+    90% {
+        clip: rect(0px, auto, auto, auto);
+        transform: translateY(20px)
     }
     100% {
         transform: translateY(0);
