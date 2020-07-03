@@ -1,0 +1,1 @@
+var buttonSearch=document.querySelector(".button-popup"),windowPopup=document.querySelector(".popup-element");console.log(buttonSearch),buttonSearch.addEventListener("click",function(e){e.preventDefault(),windowPopup.classList.toggle("modal-popup")});
