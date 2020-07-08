@@ -54,7 +54,7 @@ html {
 body {
     height: 100%;
     background-color: var(--basic-light-grey);
-    font-family: 'PT Sans', 'Arial', sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     color: var(--basic-black);
     text-transform: uppercase;
     font-size: 14px;
@@ -167,7 +167,7 @@ a {
     justify-content: flex-end;
     align-items: center;
     background-color: var(--basic-grey);
-    background-image: url("../img/background_photo.jpg");
+    background-image: url(../img/background_photo.jpg);
     background-repeat: no-repeat;
     min-height: 509px;
 }
@@ -175,7 +175,7 @@ a {
 .title-picture::after {
     content: "";
     display: block;
-    background-image: url("../img/background_mask.png");
+    background-image: url(../img/background_mask.png);
     background-repeat: no-repeat;
     width: 1200px;
     height: 57px;
@@ -692,7 +692,7 @@ a {
 
 .range-filter {
     position: relative;
-    margin-bottom: 33px;
+    margin-bottom: 32px;
 }
 
 .scale {
@@ -739,7 +739,8 @@ a {
 .result-button {
     display: inline-block;
     vertical-align: middle;
-    padding: 5px 35px 6px 36px;
+    margin-right: 9px;
+    padding: 6px 35px 7px 36px;
     background-color: transparent;
     border: 2px solid var(--basic-white);
     font-size: 14px;
@@ -912,6 +913,7 @@ a {
 .details {
     background-color: var(--basic-blue);
     color: var(--basic-white);
+    font-weight: bold;
     display: inline-block;
     vertical-align: middle;
     padding: 3px 16px 2px 17px;
@@ -930,6 +932,7 @@ a {
 .reservation {
     background-color: var(--special-brown);
     color: var(--basic-white);
+    font-weight: bold;
     display: inline-block;
     vertical-align: middle;
     padding: 3px 17px 2px 16px;
