@@ -16,11 +16,6 @@
     --hover-grey-: #EBEBEB;
 }
 
-iframe {
-    width: 100%;
-    height: 588px;
-}
-
 
 /* Global */
 
@@ -152,7 +147,7 @@ a {
 /*Section Heading*/
 
 .heading-site {
-    margin-bottom: 54px;
+    margin-bottom: 53px;
 }
 
 .title-slogan {
@@ -187,12 +182,14 @@ a {
 
 .heading-site h3 {
     margin-bottom: 43px;
+    padding: 0 72px 0 72px;
     font-size: 21px;
     line-height: 26px;
     text-align: center;
 }
 
 .heading-site p {
+    padding: 0 72px 0 72px;
     font-size: 14px;
     line-height: 26px;
     color: var(--basic-light-black);
@@ -223,11 +220,12 @@ a {
 .wrapper-for-title {
     flex-shrink: 0;
     width: 400px;
-    padding: 45px 49px 0;
+    padding: 45px 49px 45px;
 }
 
 .first img,
 .second img {
+    height: 256px;
     flex-grow: 2;
 }
 
@@ -382,6 +380,11 @@ a {
     animation: bounce 0.5s;
 }
 
+.modal-error {
+    -webkit-animation: shake 0.6s;
+    animation: shake 0.6s;
+}
+
 .popup-element input {
     border: none;
     background-color: var(--special-light-grey);
@@ -399,6 +402,7 @@ a {
 
 .popup-element input:focus {
     background-color: var(--basic-white);
+    border: 2px solid var(--special-light-grey);
 }
 
 .date-arrival input,
@@ -564,6 +568,15 @@ a {
 }
 
 
+/* Map */
+
+.map {
+    width: 100%;
+    height: 588px;
+    background-image: url(../img/map.png);
+}
+
+
 /*Hotels site*/
 
 
@@ -571,7 +584,7 @@ a {
 
 .form-block {
     background-color: var(--basic-grey);
-    background-image: url(../img/background_hottels.jpg);
+    background-image: url(../img/background_hotels.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     min-height: 217px;
@@ -708,6 +721,7 @@ a {
 }
 
 .toggle {
+    display: block;
     position: absolute;
     width: 19px;
     height: 19px;
@@ -715,7 +729,7 @@ a {
     border: 8px solid var(--basic-white);
     background-color: var(--basic-grey);
     border-radius: 50%;
-    box-shadow: 0 2px 1px 0 var(--basic-grey);
+    box-shadow: 0 1px 1px 0 var(--basic-grey);
     top: -8px;
 }
 
@@ -727,12 +741,13 @@ a {
     left: 80%;
 }
 
-.toggle:hover {
+.toggle:hover,
+.toggle:focus {
     width: 23px;
     height: 23px;
-    top: -11px;
+    top: -10px;
     border: 9px solid var(--basic-white);
-    box-shadow: 0 4px 1px 0 var(--basic-grey);
+    box-shadow: 0 1px 1px 0 var(--basic-grey);
     cursor: pointer;
 }
 
@@ -748,7 +763,8 @@ a {
     color: var(--basic-white);
 }
 
-.result-button:hover {
+.result-button:hover,
+.result-button:focus {
     color: var(--basic-black);
     background-color: var(--basic-white);
     cursor: pointer;
@@ -781,22 +797,23 @@ a {
 
 .sorting-list .active-item {
     color: var(--basic-blue);
-    border-bottom: 1px dotted;
+    border-bottom: 1px dotted transparent;
 }
 
 .sorting-item {
     color: var(--basic-grey);
+    border-bottom: 1px dotted var(--basic-grey);
     margin-right: 33px;
 }
 
 .sorting-item:hover {
     color: var(--basic-blue);
-    border-bottom: 1px dotted var(--basic-blue)
+    border-bottom: 1px dotted var(--basic-blue);
 }
 
 .sorting-item:active {
     color: var(--basic-black);
-    border: none;
+    border-bottom: 1px dotted transparent;
 }
 
 .arrow-up {
@@ -837,19 +854,19 @@ a {
     list-style: none;
 }
 
-.list-search li:first-child {
+.list-search>li:first-child {
     border-top: 1px solid var(--special-light-grey);
 }
 
-.list-search li {
+.list-search>li {
     border-bottom: 1px solid var(--special-light-grey);
 }
 
 .item-search {
     display: grid;
-    grid-template-columns: 135px 1fr -webkit-min-content;
-    grid-template-columns: 135px 1fr min-content;
-    padding: 23px 70px 29px 73px;
+    grid-template-columns: 135px 1fr 1fr;
+    grid-template-columns: 135px 1fr 1fr;
+    padding: 23px 70px 30px 73px;
     grid-gap: 29px;
 }
 
@@ -857,20 +874,20 @@ a {
     margin-top: 6px;
 }
 
-.name-hous {
+.name-house {
     margin-bottom: 7px;
 }
 
-.name-hous a {
+.name-house a {
     font-size: 21px;
     line-height: 26px;
 }
 
-.name-hous a:hover {
+.name-house a:hover {
     color: var(--basic-blue);
 }
 
-.name-hous a:active {
+.name-house a:active {
     color: var(--basic-grey);
 }
 
@@ -883,21 +900,21 @@ a {
 }
 
 .button-link {
-    margin-top: 14px;
+    margin-top: 15px;
 }
 
-.list-search div:last-child {
+.rating-block {
+    text-align: end;
     padding-right: 1px;
     padding-top: 2px;
 }
 
 .star {
-    text-align: end;
     margin-bottom: 47px;
 }
 
-.star span {
-    margin-left: 5px;
+.star li {
+    margin-left: 1px;
     display: inline-block;
     vertical-align: middle;
     background: url(../img/star.svg) repeat-x;
@@ -949,6 +966,7 @@ a {
 
 .rating-paragraph {
     display: inline-block;
+    vertical-align: middle;
     color: var(--basic-light-black);
     background-color: var(--special-light-grey);
     padding: 3px 12px 3px 15px;
@@ -974,14 +992,14 @@ a {
     opacity: 0.9;
 }
 
-.phone-conteiner {
+.phone-container {
     font-weight: bold;
     font-size: 21px;
     line-height: 26px;
     text-align: center;
 }
 
-.phone-conteiner p:first-child {
+.phone-container p:first-child {
     margin-bottom: 10px;
 }
 
@@ -1132,5 +1150,45 @@ a {
     }
     100% {
         transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes shake {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(10px);
+    }
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(10px);
     }
 }
